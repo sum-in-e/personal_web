@@ -1,9 +1,11 @@
 import React from 'react';
 import Router from './Router';
-import Header from './Header';
+import Header from './components/Header';
+import GlobalStyle from './components/GlobalStyle';
 
 const App = () => (
 	<>
+		<GlobalStyle />
 		<Header />
 		<Router />
 	</>

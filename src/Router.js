@@ -1,15 +1,15 @@
 import React from 'react';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import About from '../routes/About';
-import Portfolio from '../routes/Portfolio';
-import Detail from '../routes/Detail';
+import Main from './Pages/Main';
+import Portfolio from './Pages/Portfolio';
+import Detail from './Pages/Detail';
 
 const MyRouter = () => (
 	<Router>
 		<>
 			<Switch>
 				<Route path="/" exact>
-					<About />
+					<Main />
 				</Route>
 				<Route path="/portfolio/:id">
 					<Detail />
