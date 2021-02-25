@@ -13,9 +13,9 @@ const Header = () => {
 	};
 	return (
 		<Container>
-			<a href="/">
+			<A href="/">
 				<Title>Sumin Kim</Title>
-			</a>
+			</A>
 			<Contact>
 				<Links>
 					<Link>
@@ -53,9 +53,7 @@ const Container = styled.header`
 `;
 
 /* ----------- Title ----------- */
-const Title = styled.h1`
-	cursor: pointer;
-`;
+const Title = styled.h1``;
 
 /* ----------- Contact ----------- */
 const Contact = styled.div`
@@ -82,6 +80,8 @@ const Link = styled.li`
 `;
 
 const A = styled.a`
+	width: fit-content;
+
 	cursor: pointer;
 `;
 
