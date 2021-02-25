@@ -1,24 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { React } from 'react';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Navigation = () => (
-	<Container>
-		<Ul>
-			<Li>
-				<GoToLink to="/">MAIN</GoToLink>
-			</Li>
-			<Li>
-				<GoToLink to="/portfolio">PORTFOLIO</GoToLink>
-			</Li>
-		</Ul>
-	</Container>
-);
+const Navigation = () => {
+	const location = useLocation();
+	const params = useParams();
+	return (
+		<Container isDetail={params.id !== undefined}>
+			{params.id === undefined ? (
+				''
+			) : (
+				<GoBack to="/portfolio">
+					<img src="https://img.icons8.com/cotton/64/000000/back.png" />
+				</GoBack>
+			)}
+			<Ul>
+				<Li isPainting={location.pathname === '/'}>
+					<GoToLink to="/">MAIN</GoToLink>
+				</Li>
+				<Li isPainting={location.pathname.includes('portfolio')}>
+					<GoToLink to="/portfolio">PORTFOLIO</GoToLink>
+				</Li>
+			</Ul>
+		</Container>
+	);
+};
 
 const Container = styled.nav`
 	display: flex;
-	justify-content: flex-end;
-	width: 100%;
+	justify-content: ${props => (props.isDetail ? 'space-between' : 'flex-end')};
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 70%;
+	height: 85px;
+	padding: 20px 30px;
+	background-color: #f3f6f8;
+`;
+
+const GoBack = styled(Link)`
+	& > img {
+		width: 40px;
+		height: 40px;
+	}
 `;
 
 const Ul = styled.ul`
@@ -27,6 +52,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
 	margin-left: 30px;
+	border-bottom: 1px solid ${props => (props.isPainting ? ' black' : 'none')};
 	cursor: pointer;
 `;
 
