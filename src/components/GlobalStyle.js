@@ -10,10 +10,16 @@ const globalStyle = createGlobalStyle`
     }
     *{
         box-sizing : border-box;
+        word-break : keep-all;
+        word-wrap : break-word;
     }
     html, body{
+        overflow : hidden;
         margin : 0;
-        font-size : 16px;
+        font-size : 25px;
+        font-family: 'Gothic A1', sans-serif;
+        font-weight : 200;
+        line-height : 25px;
     }
 `;
 
