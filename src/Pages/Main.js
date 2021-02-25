@@ -5,37 +5,24 @@ import Navigation from '../components/Navigation';
 const Main = () => (
 	<Container>
 		<Navigation />
-		<Summary>
-			<TitleWrapper>
-				<Title>{`"Less is more."`}</Title>
-				<SemiTitle>쉽게 읽히는 서비스를 만들어가는 개발자 입니다.</SemiTitle>
-			</TitleWrapper>
-		</Summary>
+		<Section>
+			<Title>{`"Less is more."`}</Title>
+			<SemiTitle>쉽게 읽히는 서비스를 만들어가는 개발자 입니다.</SemiTitle>
+		</Section>
 	</Container>
 );
 
 const Container = styled.main`
-	height: 100vh;
-	width: 70%;
-	padding: 30px 40px;
-	background-color: #e1e8ed;
-	background-color: #f3f6f8;
-`;
-
-const Summary = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 100%;
-
-	& > * {
-		width: 80%;
-	}
+	height: 100vh;
+	width: 70%;
+	padding: 30px;
+	background-color: #f3f6f8;
 `;
 
-const TitleWrapper = styled.div`
-	margin-bottom: 60px;
-`;
+const Section = styled.section``;
 
 const Title = styled.h1`
 	margin-bottom: 40px;
