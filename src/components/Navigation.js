@@ -21,6 +21,18 @@ const Navigation = () => {
 				<Li isPainting={location.pathname.includes('portfolio')}>
 					<GoToLink to="/portfolio">PORTFOLIO</GoToLink>
 				</Li>
+				<Li>
+					<a href="https://sumpson0-0.github.io" target="blank">
+						BLOG
+					</a>
+				</Li>
+				{location.pathname.includes('resume') ? (
+					<Li isPainting={location.pathname.includes('resume')}>
+						<GoToLink to="/private/resume">RESUME</GoToLink>
+					</Li>
+				) : (
+					''
+				)}
 			</Ul>
 		</Container>
 	);
