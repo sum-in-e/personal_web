@@ -1,105 +1,95 @@
-import React, { useRef } from 'react';
+import { React } from 'react';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Header = () => {
-	const textRef = useRef();
-	const d = new Date();
-	const year = d.getFullYear();
-
-	const onClickEmail = () => {
-		textRef.current.select();
-		document.execCommand('copy');
-		alert('Successfully copied email.');
-	};
+const Navigation = () => {
+	const location = useLocation();
+	const params = useParams();
 	return (
-		<Container>
+		<Container isDetail={params.id !== undefined}>
 			<A href="/">
 				<Title>Sumin Kim</Title>
 			</A>
-			<Contact>
-				<Links>
-					<Link>
-						<img src="https://img.icons8.com/ios-glyphs/30/52565e/email.png" />
-						<P onClick={onClickEmail}>sumpson00@gmail.com</P>
-					</Link>
-					<EmailInput type="text" ref={textRef} value="sumpson00@gmail.com" readOnly />
-					<Link>
-						<img src="https://img.icons8.com/ios-glyphs/30/52565e/github.png" />
-						<A href="https://github.com/sumpson0-0" target="_blank">
-							https://github.com/sumpson0-0
-						</A>
-					</Link>
-					<Link>
-						<img src="https://img.icons8.com/ios-glyphs/30/52565e/blog.png" />
-						<A href="https://sumpson0-0.github.io" target="_blank">
-							sumpson0-0.github.io
-						</A>
-					</Link>
-				</Links>
-			</Contact>
-			<Copyright>{year}&#174;</Copyright>
+			{params.id === undefined ? (
+				''
+			) : (
+				<GoBack to="/portfolio">
+					<img src="https://img.icons8.com/cotton/64/000000/back.png" />
+				</GoBack>
+			)}
+			<Nav>
+				<Ul>
+					<Li isPainting={location.pathname === '/'}>
+						<GoToLink to="/">MAIN</GoToLink>
+					</Li>
+					<Li isPainting={location.pathname === '/about'}>
+						<GoToLink to="/about">ABOUT</GoToLink>
+					</Li>
+					<Li isPainting={location.pathname.includes('portfolio')}>
+						<GoToLink to="/portfolio">PORTFOLIO</GoToLink>
+					</Li>
+					<Li>
+						<a href="https://sumpson0-0.github.io" target="blank">
+							BLOG
+						</a>
+					</Li>
+					{location.pathname.includes('resume') ? (
+						<Li isPainting={location.pathname.includes('resume')}>
+							<GoToLink to="/private/resume">RESUME</GoToLink>
+						</Li>
+					) : (
+						''
+					)}
+				</Ul>
+			</Nav>
 		</Container>
 	);
 };
 
 const Container = styled.header`
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
-	width: 30%;
-	padding: 30px;
-	background-color: white;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
+	padding: 20px 250px;
+	border-bottom: 1px solid ${props => props.theme.line};
+	background-color: #ffffff;
+	font-family: 'ELAND_Choice_M';
+	font-size: 22px;
+	z-index: 10;
 `;
 
 /* ----------- Title ----------- */
 const Title = styled.h1``;
 
-/* ----------- Contact ----------- */
-const Contact = styled.div`
-	height: 100%;
-	padding-top: 35px;
+const A = styled.a`
+	width: fit-content;
+	cursor: pointer;
 `;
 
-const Links = styled.ul`
-	display: flex;
-	flex-direction: column;
-`;
-
-const Link = styled.li`
-	display: flex;
-	align-items: center;
-	margin-bottom: 6px;
-	font-size: 17px;
-
+const GoBack = styled(Link)`
 	& > img {
-		width: 25px;
-		height: 25px;
-		margin-right: 5px;
+		width: 40px;
+		height: 40px;
 	}
 `;
 
-const A = styled.a`
-	width: fit-content;
+const Nav = styled.nav``;
 
+const Ul = styled.ul`
+	display: flex;
+`;
+
+const Li = styled.li`
+	margin-left: 30px;
+	color: ${props => (props.isPainting ? props.theme.main : 'none')};
 	cursor: pointer;
 `;
 
-const P = styled.p`
-	cursor: pointer;
-`;
+const GoToLink = styled(Link)``;
 
-const EmailInput = styled.input`
-	position: absolute;
-	bottom: -50px;
-	opacity: 0;
-`;
-
-/* ----------- Copyright ----------- */
-const Copyright = styled.p`
-	text-align: end;
-	font-size: 20px;
-	color: #6a737b;
-`;
-
-export default Header;
+export default Navigation;
