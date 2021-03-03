@@ -1,39 +1,64 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Navigation from '../components/Navigation';
+import NameCard from '../components/NameCard';
 
-const Main = () => (
-	<Container>
-		<Navigation />
-		<Section>
-			<Title>{`"Less is more."`}</Title>
-			<SemiTitle>쉽게 읽히는 서비스를 만들어가는 개발자 입니다.</SemiTitle>
-		</Section>
-	</Container>
-);
+const Main = () => {
+	const textRef = useRef();
+	const onClickEmail = () => {
+		textRef.current.select();
+		document.execCommand('copy');
+		alert('Successfully copied email.');
+	};
+	return (
+		<Container>
+			<Greeting>Hi, there!</Greeting>
+			<Section>
+				<NameCard />
+			</Section>
+		</Container>
+	);
+};
 
 const Container = styled.main`
+	overflow: hidden;
 	display: flex;
-	flex-direction: column;
+	align-items: center;
 	justify-content: center;
+	position: relative;
 	height: 100vh;
-	width: 70%;
-	padding: 30px;
-	background-color: #f3f6f8;
+	width: 100vw;
+	padding: 30px 250px;
 `;
 
-const Section = styled.section``;
-
-const Title = styled.h1`
-	margin-bottom: 40px;
-	font-family: 'Newsreader', serif;
-	font-weight: 300;
-	font-size: 35px;
-	font-style: italic;
+const Greeting = styled.p`
+	font-family: 'ELAND_Choice_M';
+	font-size: 50px;
 `;
 
-const SemiTitle = styled.h2`
-	font-size: 20px;
+const Section = styled.section`
+	position: absolute;
+	bottom: -50vh;
+	height: 250px;
+	width: 500px;
+	z-index: 5;
+	-webkit-animation: rising 1s ease-in 1s forwards;
+	animation: rising 0.5s ease-in 1s forwards;
+	@-webkit-keyframes rising {
+		0% {
+			bottom: -50vh;
+		}
+		100% {
+			bottom: 30%;
+		}
+	}
+	@keyframes rising {
+		0% {
+			bottom: -50vh;
+		}
+		100% {
+			bottom: 30%;
+		}
+	}
 `;
 
 export default Main;
