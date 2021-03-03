@@ -1,20 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import Router from './Router';
-import Header from './components/Header';
-import GlobalStyle from './components/GlobalStyle';
+import GlobalStyle from './style/GlobalStyle';
+import theme from './style/theme';
 
 const App = () => (
-	<Container>
+	<ThemeProvider theme={theme}>
 		<GlobalStyle />
-		<Header />
 		<Router />
-	</Container>
+	</ThemeProvider>
 );
-
-const Container = styled.div`
-	display: flex;
-	width: 100%;
-`;
 
 export default App;
