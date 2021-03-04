@@ -22,7 +22,6 @@ const globalStyle = createGlobalStyle`
     }
     html, body{
         overflow-x : hidden;
-        margin : 0;
         font-family: 'NanumSquare', sans-serif;  
         font-size : 18px;
         line-height : 25px;

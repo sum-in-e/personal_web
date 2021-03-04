@@ -48,7 +48,7 @@ const Section = styled.section`
 			bottom: -50vh;
 		}
 		100% {
-			bottom: 30%;
+			bottom: 35%;
 		}
 	}
 	@keyframes rising {
@@ -56,7 +56,7 @@ const Section = styled.section`
 			bottom: -50vh;
 		}
 		100% {
-			bottom: 30%;
+			bottom: 35%;
 		}
 	}
 `;
