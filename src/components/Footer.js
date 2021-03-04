@@ -19,13 +19,14 @@ const Footer = () => {
 				<Links>
 					<Link>
 						<A href="https://www.linkedin.com/in/sumin-kim-434279204/" target="_blank">
-							<Img src="https://img.icons8.com/ios/100/ffffff/linkedin-2--v1.png" />{' '}
+							<Img src="https://img.icons8.com/ios/100/ffffff/linkedin-2--v1.png" alt="Linked In" />{' '}
 						</A>
 					</Link>
 					<Link>
 						<A>
 							<Img
 								src="https://img.icons8.com/ios/100/ffffff/composing-mail.png"
+								alt="Email"
 								onClick={onClickEmail}
 							/>{' '}
 						</A>
@@ -33,12 +34,12 @@ const Footer = () => {
 					<EmailInput type="text" ref={textRef} value="sumpson00@gmail.com" readOnly />
 					<Link>
 						<A href="https://github.com/sumpson0-0" target="_blank">
-							<Img src="https://img.icons8.com/ios/100/ffffff/github-2.png" />
+							<Img src="https://img.icons8.com/ios/100/ffffff/github-2.png" alt="Github" />
 						</A>
 					</Link>
 					<Link>
 						<A href="https://sumpson0-0.github.io" target="_blank">
-							<Img src="https://img.icons8.com/ios/100/ffffff/blog.png" />{' '}
+							<Img src="https://img.icons8.com/ios/100/ffffff/blog.png" alt="Blog" />{' '}
 						</A>
 					</Link>
 				</Links>
@@ -52,14 +53,15 @@ const Container = styled.footer`
 	display: ${props => (props.isMainPage ? 'none' : 'flex')};
 	flex-direction: column;
 	justify-content: space-around;
-	height: 30vh;
-	width: 100%;
+	height: 25vh;
 	padding: 50px 250px 0 250px;
 	background-color: ${props => props.theme.black};
 `;
 
 /* ----------- Contact ----------- */
-const Contact = styled.div``;
+const Contact = styled.div`
+	padding: 0 250px;
+`;
 
 const Links = styled.ul`
 	display: flex;
@@ -95,9 +97,9 @@ const Img = styled.img`
 `;
 
 const EmailInput = styled.input`
+	display: none;
 	position: absolute;
 	bottom: -50px;
-	opacity: 0;
 `;
 
 /* ----------- Copyright ----------- */
