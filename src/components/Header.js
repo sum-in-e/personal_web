@@ -7,16 +7,9 @@ const Navigation = () => {
 	const params = useParams();
 	return (
 		<Container isDetail={params.id !== undefined}>
-			<A href="/">
+			<Logo href="/">
 				<Title>Sumin Kim</Title>
-			</A>
-			{params.id === undefined ? (
-				''
-			) : (
-				<GoBack to="/portfolio">
-					<img src="https://img.icons8.com/cotton/64/000000/back.png" />
-				</GoBack>
-			)}
+			</Logo>
 			<Nav>
 				<Ul>
 					<Li isPainting={location.pathname === '/'}>
@@ -29,9 +22,9 @@ const Navigation = () => {
 						<GoToLink to="/portfolio">PORTFOLIO</GoToLink>
 					</Li>
 					<Li>
-						<a href="https://sumpson0-0.github.io" target="blank">
+						<GoToBlog href="https://sumpson0-0.github.io" target="blank">
 							BLOG
-						</a>
+						</GoToBlog>
 					</Li>
 					{location.pathname.includes('resume') ? (
 						<Li isPainting={location.pathname.includes('resume')}>
@@ -56,28 +49,22 @@ const Container = styled.header`
 	width: 100%;
 	height: 60px;
 	padding: 20px 250px;
-	border-bottom: 1px solid ${props => props.theme.line};
-	background-color: #ffffff;
+	background-color: ${props => props.theme.white};
+	box-shadow: 7px 7px 10px rgb(0 0 0 / 10%), -7px -7px 10px rgb(0 0 0 / 10%);
 	font-family: 'ELAND_Choice_M';
-	font-size: 22px;
+	font-size: 20px;
 	z-index: 10;
 `;
 
-/* ----------- Title ----------- */
-const Title = styled.h1``;
-
-const A = styled.a`
+/* ----------- Logo ----------- */
+const Logo = styled.a`
 	width: fit-content;
 	cursor: pointer;
 `;
 
-const GoBack = styled(Link)`
-	& > img {
-		width: 40px;
-		height: 40px;
-	}
-`;
+const Title = styled.h1``;
 
+/* ----------- nav ----------- */
 const Nav = styled.nav``;
 
 const Ul = styled.ul`
@@ -90,6 +77,12 @@ const Li = styled.li`
 	cursor: pointer;
 `;
 
-const GoToLink = styled(Link)``;
+const GoToLink = styled(Link)`
+	font-size: 17px;
+`;
+
+const GoToBlog = styled.a`
+	font-size: 17px;
+`;
 
 export default Navigation;
