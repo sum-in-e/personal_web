@@ -50,7 +50,7 @@ const Detail = () => (
 	</Container>
 );
 
-const Container = styled.article`
+const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -64,6 +64,7 @@ const Container = styled.article`
 	}
 `;
 
+/* ----------- Desktop ----------- */
 const Desktop = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -78,6 +79,7 @@ const DesktopImg = styled.img`
 	width: 100%;
 `;
 
+/* ----------- Tablet ----------- */
 const Tablet = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -116,6 +118,7 @@ const BlockInTablet2 = styled.div`
 	}
 `;
 
+/* ----------- Mobile ----------- */
 const Mobile = styled.div`
 	display: flex;
 	justify-content: space-around;
