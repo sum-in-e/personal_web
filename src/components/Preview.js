@@ -3,80 +3,131 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Preview = data => (
-	<GoToLink to={`/portfolio/${data.data.params}`}>
-		<Container>
-			<Info>
-				<Name>{data.data.name}</Name>
-				<ExceptName>
-					<Summary>{data.data.summary}</Summary>
-					<Stacks>
-						{data.data.stacks.map((stack, index) => (
-							<Stack key={index}>{stack}</Stack>
-						))}
-					</Stacks>
-				</ExceptName>
-			</Info>
-			<PreviewImg imgPath={data.data.previewImg}></PreviewImg>
-		</Container>
-	</GoToLink>
+	<Container>
+		<GoToLink to={`/portfolio/${data.data.params}`}>
+			<Title>{data.data.name}</Title>
+			<Keywords>
+				{data.data.keyword.map((keyword, index) => (
+					<Keyword key={index}>{keyword}</Keyword>
+				))}
+			</Keywords>
+			<Images>
+				<ImgWrapper isExist={data.data.deploy !== ''}>
+					<Img src={data.data.deploy} alt="Deployed" />
+					<Explanation>배포</Explanation>
+				</ImgWrapper>
+				<ImgWrapper isExist={data.data.isResponsive !== ''}>
+					<Img src="https://img.icons8.com/officel/80/000000/media-queries.png" alt="Responsive" />
+					<Explanation>반응형</Explanation>
+				</ImgWrapper>
+			</Images>
+		</GoToLink>
+	</Container>
 );
-const GoToLink = styled(Link)`
-	margin-bottom: 30px;
-`;
 
 const Container = styled.article`
-	display: grid;
-	grid-template-columns: minmax(min-content, 1.5fr) minmax(max-content, 1fr);
-	grid-template-rows: 1fr;
-	height: 200px;
-	border-radius: 3px;
-	background-color: white;
-	color: inherit;
-	box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
-	font-size: 15px;
+	width: 100%;
+	padding: 20px 0;
+	border-bottom: 1px solid ${props => props.theme.line};
 	cursor: pointer;
+	transition: all 0.3s;
+	&:first-child {
+		border-top: 1px solid ${props => props.theme.line};
+	}
+	&:hover {
+		background-color: ${props => props.theme.main};
+	}
 `;
 
-const PreviewImg = styled.div`
-	height: auto;
-	width: 100%;
-	background: ${props => `url(${props.imgPath}) no-repeat center right`};
-	background-size: contain;
-`;
-
-const Info = styled.div`
+const GoToLink = styled(Link)`
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	height: 100%;
-	padding: 20px 20px 10px 20px;
+	align-items: center;
+	padding: 10px;
 `;
 
-const Name = styled.h2`
+/* --------------------------- Title --------------------------- */
+const Title = styled.h2`
+	width: 30%;
 	margin-bottom: 5px;
 	font-size: 23px;
 	font-weight: 500;
+	transition: all 0.3s;
+
+	${Container}:hover & {
+		color: ${props => props.theme.white};
+	}
 `;
-const ExceptName = styled.div``;
 
-const Summary = styled.p`
-	margin-bottom: 10px;
-	font-weight: 400;
+/* --------------------------- Keywords --------------------------- */
+const Keywords = styled.div`
+	width: 55%;
 `;
 
-const Stacks = styled.div``;
-
-const Stack = styled.div`
+const Keyword = styled.div`
 	display: inline-block;
 	width: fit-content;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	padding: 0 5px;
-	border: 1px solid gray;
-	border-radius: 3px;
+	padding: 0 10px;
+	margin: 3px;
+	border: 1px solid ${props => props.theme.line};
+	border-radius: 15px;
+	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 	font-size: 13px;
 	font-weight: 400;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	${Container}:hover & {
+		background-color: ${props => props.theme.white};
+		border: 1px solid ${props => props.theme.main};
+	}
+`;
+
+/* --------------------------- Images --------------------------- */
+const Images = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	width: 15%;
+`;
+const ImgWrapper = styled.div`
+	display: ${props => (props.isExist ? 'flex' : 'none')};
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: fit-content;
+	padding: 8px;
+	margin-left: 10px;
+	border: 1px solid ${props => props.theme.line};
+	border-radius: 50%;
+	transition: all 0.3s;
+
+	${Container}:hover & {
+		background-color: ${props => props.theme.white};
+		border: 1px solid ${props => props.theme.main};
+	}
+`;
+
+const Img = styled.img`
+	width: 30px;
+`;
+
+const Explanation = styled.div`
+	position: absolute;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: ${props => props.theme.black};
+	color: ${props => props.theme.white};
+	font-size: 10px;
+	padding: 0 8px;
+	transition: all 0.3s;
+	opacity: 0;
+
+	${ImgWrapper}:hover & {
+		transform: translateY(10px);
+		opacity: 1;
+	}
 `;
 
 export default Preview;
