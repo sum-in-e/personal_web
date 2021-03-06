@@ -49,13 +49,7 @@ const Detail = () => {
 					<Category>소개</Category>
 					<Description>{portfolioData ? portfolioData.description : ''}</Description>
 					<PointWrapper>
-						{portfolioData
-							? portfolioData.point.map((p, index) => (
-									<Point key={index}>
-										{index + 1}. {p}
-									</Point>
-							  ))
-							: ''}
+						{portfolioData ? portfolioData.point.map((p, index) => <Point key={index}>{p}</Point>) : ''}
 					</PointWrapper>
 				</Introduction>
 				<Introduction>
@@ -166,12 +160,13 @@ const Description = styled.p`
 	color: ${props => props.theme.text};
 `;
 
-const PointWrapper = styled.div`
-	padding-left: 10px;
+const PointWrapper = styled.ul`
+	padding-left: 20px;
 	margin-top: 10px;
 `;
 
-const Point = styled.p`
+const Point = styled.li`
+	list-style-type: disc;
 	font-size: 17px;
 	white-space: pre-wrap;
 	line-height: 32px;
