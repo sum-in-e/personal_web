@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Resume = () => (
 	<Container>
-		<File href="https://drive.google.com/file/d/17XR0nLun078N-ZcwfNsJ8h8uVRuw65MM/view?usp=sharing" target="_blank">
+		<File href="https://drive.google.com/file/d/1SyQmH9ucO2lBSCrR_7CoCbRM2KziRl34/view?usp=sharing" target="_blank">
 			<FileImg src="https://img.icons8.com/plasticine/100/000000/pdf.png" />
 			<FileName>Sumin-Kim-Resume-2021.pdf</FileName>
 			<Capacity>152KB</Capacity>
@@ -17,8 +17,8 @@ const Resume = () => (
 				<SmallCategory>Contact</SmallCategory>
 				<Block>
 					<Head>Email.</Head>
-					<Email href="mailto:sumpson00@gmail.com" title="메일 보내기">
-						sumpson00@gmail.com
+					<Email href="mailto:suminkim.me@gmail.com" title="메일 보내기">
+						suminkim.me@gmail.com
 					</Email>
 				</Block>
 			</Contact>
@@ -87,8 +87,8 @@ const Resume = () => (
 						<Summary>
 							한국 및 주요 국가들의 Covid-19 현황과 전 세계 통계를 볼 수 있는 웹사이트입니다.
 							<br /> Covid-19의 증상, 예방법을 제공하는 About 페이지와 COVID-19 Tracking API로부터 통계
-							데이터를 받아오는 Dashboard 페이지로 구성되어 있으며, <br /> Search를 이용해 찾고자 하는
-							국가를 검색할 수 있습니다.
+							데이터를 받아오는 Dashboard 페이지로 구성되어 있으며, Search 기능 이용해 찾고자 하는 국가를
+							검색할 수 있습니다.
 						</Summary>
 					</InfoBlock>
 					<InfoBlock>
