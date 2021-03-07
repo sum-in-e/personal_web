@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -6,13 +6,8 @@ import styled from 'styled-components';
 const Footer = () => {
 	const d = new Date();
 	const year = d.getFullYear();
-	const textRef = useRef();
 	const location = useLocation();
-	const onClickEmail = () => {
-		textRef.current.select();
-		document.execCommand('copy');
-		alert('Successfully copied email.');
-	};
+
 	return (
 		<Container isMainPage={location.pathname === '/'}>
 			<Contact>
@@ -23,15 +18,10 @@ const Footer = () => {
 						</A>
 					</Link>
 					<Link>
-						<A>
-							<Img
-								src="https://img.icons8.com/ios/100/ffffff/composing-mail.png"
-								alt="Email"
-								onClick={onClickEmail}
-							/>{' '}
+						<A href="mailto:suminkim.me@gmail.com">
+							<Img src="https://img.icons8.com/ios/100/ffffff/composing-mail.png" alt="Email" />{' '}
 						</A>
 					</Link>
-					<EmailInput type="text" ref={textRef} value="sumpson00@gmail.com" readOnly />
 					<Link>
 						<A href="https://github.com/sumpson0-0" target="_blank">
 							<Img src="https://img.icons8.com/ios/100/ffffff/github-2.png" alt="Github" />
@@ -94,12 +84,6 @@ const A = styled.a`
 
 const Img = styled.img`
 	width: 30px;
-`;
-
-const EmailInput = styled.input`
-	display: none;
-	position: absolute;
-	bottom: -50px;
 `;
 
 /* ----------- Copyright ----------- */

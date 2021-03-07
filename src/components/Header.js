@@ -8,14 +8,14 @@ const Navigation = () => {
 	return (
 		<Container isDetail={params.id !== undefined}>
 			<Logo href="/">
-				<Title>Sumin Kim</Title>
+				<Title>SUMIN KIM</Title>
 			</Logo>
 			<Nav>
 				<Ul>
 					<Li isPainting={location.pathname === '/'}>
 						<GoToLink to="/">MAIN</GoToLink>
 					</Li>
-					<Li isPainting={location.pathname === '/about'}>
+					<Li isPainting={location.pathname.includes('about')}>
 						<GoToLink to="/about">ABOUT</GoToLink>
 					</Li>
 					<Li isPainting={location.pathname.includes('portfolio')}>
@@ -26,13 +26,6 @@ const Navigation = () => {
 							BLOG
 						</GoToBlog>
 					</Li>
-					{location.pathname.includes('resume') ? (
-						<Li isPainting={location.pathname.includes('resume')}>
-							<GoToLink to="/private/resume">RESUME</GoToLink>
-						</Li>
-					) : (
-						''
-					)}
 				</Ul>
 			</Nav>
 		</Container>

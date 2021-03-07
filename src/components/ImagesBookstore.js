@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import desktopHome from '../assets/images/bookstore/desktop-home.png';
 import desktopSearch from '../assets/images/bookstore/desktop-search.png';
+import desktopNoSearch from '../assets/images/bookstore/desktop-no-search.png';
 import desktopDetail from '../assets/images/bookstore/desktop-detail.png';
 import tabletHome from '../assets/images/bookstore/tablet-home.png';
 import tabletSearch from '../assets/images/bookstore/tablet-search.png';
@@ -16,6 +17,7 @@ const Detail = () => (
 			<DesktopImg src={desktopHome} alt="Desktop Preview" />
 			<DesktopImg src={desktopDetail} alt="Desktop Preview" />
 			<DesktopImg src={desktopSearch} alt="Desktop Preview" />
+			<DesktopImg src={desktopNoSearch} alt="Desktop Preview" />
 		</Desktop>
 		<Tablet>
 			<TabletImg src={tabletHome} alt="Tablet Preview"></TabletImg>

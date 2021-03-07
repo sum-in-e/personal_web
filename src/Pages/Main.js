@@ -1,23 +1,15 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NameCard from '../components/NameCard';
 
-const Main = () => {
-	const textRef = useRef();
-	const onClickEmail = () => {
-		textRef.current.select();
-		document.execCommand('copy');
-		alert('Successfully copied email.');
-	};
-	return (
-		<Container>
-			<Greeting>Hi, there!</Greeting>
-			<Section>
-				<NameCard />
-			</Section>
-		</Container>
-	);
-};
+const Main = () => (
+	<Container>
+		<Greeting>Hi, there!</Greeting>
+		<Section>
+			<NameCard />
+		</Section>
+	</Container>
+);
 
 const Container = styled.main`
 	overflow: hidden;
