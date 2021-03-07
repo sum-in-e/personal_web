@@ -16,17 +16,17 @@ const MyRouter = () => (
 				<Route path="/" exact>
 					<Main />
 				</Route>
-				<Route path="/about">
+				<Route path="/about/resume">
+					<Resume />
+				</Route>
+				<Route path="/about" exact>
 					<About />
 				</Route>
 				<Route path="/portfolio/:id">
 					<Detail />
 				</Route>
-				<Route path="/portfolio">
+				<Route path="/portfolio" exact>
 					<Portfolio />
-				</Route>
-				<Route path="/private/resume">
-					<Resume />
 				</Route>
 				<Redirect from="*" to="/" />
 			</Switch>

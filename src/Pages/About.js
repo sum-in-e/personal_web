@@ -29,7 +29,7 @@ const About = () => {
 							현재는 UI/UX 디자인에 대한 이해도를 높이고 이를 바탕으로 완성도 높은 웹을 구현하는
 							프론트엔드 개발자가 되는 것을 목표로 하고 있습니다.
 						</ProfileText>
-						<Resume to="/resume">Resume</Resume>
+						<Resume to="/about/resume">Resume</Resume>
 					</Content>
 					<Content>
 						<Category>이러한 것들을 중요시해요.</Category>
@@ -275,16 +275,23 @@ const SkillSummary = styled.ul``;
 const Li = styled.li`
 	padding: 3px 7px;
 	margin-bottom: 5px;
-	border: 1px solid ${props => props.theme.line};
-	border-radius: 3px;
+	/* border: 1px solid ${props => props.theme.line};
+	border-radius: 3px; */
 	font-size: 15px;
 	color: ${props => props.theme.text};
+
+	&:before {
+		content: '✔';
+		vertical-align: middle;
+		margin-right: 5px;
+	}
 `;
 
 /* --------------------------- CONTACT --------------------------- */
 const NameCardWrapper = styled.div`
+	height: 250px;
+	width: 500px;
 	margin-top: 30px;
-	padding-right: 65%;
 `;
 
 export default About;
