@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Preview from '../components/Preview';
 import DataRepo from '../components/DataRepository';
 
-const Portfolio = () => (
-	<Container>
-		<PreviewList>
-			{DataRepo.map((data, index) => (
-				<Preview key={index} data={data} />
-			))}
-		</PreviewList>
-	</Container>
-);
+const Portfolio = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return (
+		<Container>
+			<PreviewList>
+				{DataRepo.map((data, index) => (
+					<Preview key={index} data={data} />
+				))}
+			</PreviewList>
+		</Container>
+	);
+};
 
 const Container = styled.main`
 	min-height: 75vh;
-	display: flex;
-	align-items: center;
-	padding: 90px 250px 30px 250px;
+	padding: 130px 30px 30px;
 `;
 
 const PreviewList = styled.section`

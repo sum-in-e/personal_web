@@ -34,14 +34,15 @@ const Navigation = () => {
 
 const Container = styled.header`
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 60px;
-	padding: 20px 250px;
+	height: 100px;
+	padding: 15px 30px;
 	background-color: ${props => props.theme.white};
 	box-shadow: 7px 7px 10px rgb(0 0 0 / 10%), -7px -7px 10px rgb(0 0 0 / 10%);
 	font-family: 'ELAND_Choice_M';
@@ -58,24 +59,23 @@ const Logo = styled.a`
 const Title = styled.h1``;
 
 /* ----------- nav ----------- */
-const Nav = styled.nav``;
+const Nav = styled.nav`
+	width: 100%;
+`;
 
 const Ul = styled.ul`
 	display: flex;
+	justify-content: space-between;
 `;
 
 const Li = styled.li`
-	margin-left: 30px;
 	color: ${props => (props.isPainting ? props.theme.main : 'none')};
+	font-size: 17px;
 	cursor: pointer;
 `;
 
-const GoToLink = styled(Link)`
-	font-size: 17px;
-`;
+const GoToLink = styled(Link)``;
 
-const GoToBlog = styled.a`
-	font-size: 17px;
-`;
+const GoToBlog = styled.a``;
 
 export default Navigation;

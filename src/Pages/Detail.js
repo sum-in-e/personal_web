@@ -45,41 +45,54 @@ const Detail = () => {
 					)}
 				</Links>
 				<Title>{portfolioData ? portfolioData.name : ''}</Title>
-				<Introduction>
+				<Article>
 					<Category>소개</Category>
 					<Description>{portfolioData ? portfolioData.description : ''}</Description>
 					<PointWrapper>
 						{portfolioData ? portfolioData.point.map((p, index) => <Point key={index}>{p}</Point>) : ''}
 					</PointWrapper>
-				</Introduction>
-				<Introduction>
+				</Article>
+				<Article>
 					<Category>STACKS</Category>
 					<Stacks>
 						{portfolioData
 							? portfolioData.skill.map((stack, index) => <Stack key={index}>{stack}</Stack>)
 							: ''}
 					</Stacks>
-				</Introduction>
-				<Preview>
+				</Article>
+				<Article>
 					<Category>PREVIEW</Category>
 					{params.id === 'wcie' ? <ImageslWcie /> : ''}
 					{params.id === 'vanilla-search-movie' ? <ImagesVanillaSearchMovie /> : ''}
 					{params.id === 'bookstore' ? <ImagesBookstore /> : ''}
 					{params.id === 'covid19-tracking' ? <ImagesCovid19 /> : ''}
 					{params.id === 'todos' ? <ImagesTodos /> : ''}
-				</Preview>
+				</Article>
 			</Section>
 		</Container>
 	);
 };
 
 const Container = styled.main`
-	padding: 60px 250px;
+	padding: 130px 30px 30px;
 `;
 
 const Section = styled.section`
 	position: relative;
-	padding: 300px 0 50px 0;
+	padding-top: 150px;
+`;
+
+/* ----------- 재사용 ----------- */
+const Article = styled.article`
+	margin-bottom: 50px;
+`;
+
+const Category = styled.h2`
+	width: fit-content;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid ${props => props.theme.line};
+	font-size: 18px;
 `;
 
 /* ----------- Links ----------- */
@@ -87,12 +100,10 @@ const Links = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	position: absolute;
-	top: 30px;
-	right: 0;
+	top: 0;
 	width: 100%;
 	color: #6a737b;
 	outline: none;
-	transition: 800ms ease all;
 `;
 
 const Link = styled.a`
@@ -105,9 +116,6 @@ const Link = styled.a`
 	border: 1px solid ${props => props.theme.main};
 	border-radius: 50%;
 	cursor: ${props => (props.isBookstore ? 'not-allowed' : 'pointer')};
-	&:hover {
-		background: ${props => (props.isBookstore ? props.theme.white : props.theme.main)};
-	}
 `;
 
 const Img = styled.img`
@@ -115,61 +123,31 @@ const Img = styled.img`
 `;
 
 const Explanation = styled.div`
-	position: absolute;
-	bottom: -10px;
-	width: 150%;
-	border-radius: 5px;
-	background-color: ${props => props.theme.black};
-	color: ${props => props.theme.white};
-	text-align: center;
-	font-size: 10px;
-	transition: all 0.3s;
-	opacity: 0;
-
-	${Link}:hover & {
-		transform: translateY(20px);
-		opacity: 1;
-	}
+	display: none;
 `;
 
 /* ----------- Title ----------- */
 const Title = styled.h1`
-	margin-bottom: 100px;
-	font-weight: 500;
-	font-size: 60px;
-`;
-
-/* ----------- Introduction ----------- */
-const Introduction = styled.article`
 	margin-bottom: 50px;
-`;
-
-const Category = styled.h2`
-	width: fit-content;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid ${props => props.theme.line};
-	font-size: 22px;
+	font-weight: bold;
+	font-size: 32px;
 `;
 
 /* ----------- 소개 ----------- */
 const Description = styled.p`
-	font-size: 17px;
 	white-space: pre-wrap;
-	line-height: 32px;
+	line-height: 22px;
 	color: ${props => props.theme.text};
 `;
 
 const PointWrapper = styled.ul`
-	padding-left: 20px;
 	margin-top: 10px;
 `;
 
 const Point = styled.li`
 	list-style-type: disc;
-	font-size: 17px;
-	white-space: pre-wrap;
-	line-height: 32px;
+	margin-left: 18px;
+	line-height: 25px;
 	color: ${props => props.theme.text};
 `;
 
@@ -177,12 +155,9 @@ const Point = styled.li`
 const Stacks = styled.div``;
 
 const Stack = styled.span`
+	display: inline-block;
 	margin-right: 15px;
-	font-size: 17px;
 	color: ${props => props.theme.text};
 `;
-
-/* ----------- Preview ----------- */
-const Preview = styled.article``;
 
 export default Detail;

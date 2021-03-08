@@ -26,108 +26,73 @@ const Preview = data => (
 );
 
 const Container = styled.article`
-	width: 100%;
-	padding: 20px 0;
+	padding: 25px 0;
 	border-bottom: 1px solid ${props => props.theme.line};
 	cursor: pointer;
-	transition: all 0.3s;
 	&:first-child {
 		border-top: 1px solid ${props => props.theme.line};
-	}
-	&:hover {
-		background-color: ${props => props.theme.main};
 	}
 `;
 
 const GoToLink = styled(Link)`
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
 `;
 
 /* --------------------------- Title --------------------------- */
 const Title = styled.h2`
-	width: 30%;
-	margin-bottom: 5px;
 	font-size: 23px;
-	font-weight: 500;
-	transition: all 0.3s;
-
-	${Container}:hover & {
-		color: ${props => props.theme.white};
-	}
+	font-weight: bold;
 `;
 
 /* --------------------------- Keywords --------------------------- */
-const Keywords = styled.div`
-	width: 55%;
+const Keywords = styled.ul`
+	padding: 20px;
+	text-align: center;
 `;
 
-const Keyword = styled.div`
+const Keyword = styled.li`
 	display: inline-block;
-	width: fit-content;
-	padding: 0 10px;
-	margin: 3px;
-	border: 1px solid ${props => props.theme.line};
-	border-radius: 15px;
-	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+	padding: 0 5px;
 	font-size: 13px;
 	font-weight: 400;
-	transition: all 0.3s;
-
-	&:hover {
-		transform: translateY(-5px);
-	}
-
-	${Container}:hover & {
-		background-color: ${props => props.theme.white};
-		border: 1px solid ${props => props.theme.main};
+	&:before {
+		content: '✔';
+		vertical-align: middle;
+		margin-right: 1px;
+		font-size: 8px;
 	}
 `;
 
 /* --------------------------- Images --------------------------- */
-const Images = styled.div`
+const Images = styled.ul`
 	display: flex;
-	justify-content: flex-end;
-	width: 15%;
 `;
-const ImgWrapper = styled.div`
+
+const ImgWrapper = styled.li`
 	display: ${props => (props.isExist ? 'flex' : 'none')};
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	width: fit-content;
-	padding: 8px;
-	margin-left: 10px;
-	border: 1px solid ${props => props.theme.line};
-	border-radius: 50%;
-	transition: all 0.3s;
-
-	${Container}:hover & {
-		background-color: ${props => props.theme.white};
-		border: 1px solid ${props => props.theme.main};
-	}
+	margin: 0 5px;
 `;
 
 const Img = styled.img`
-	width: 30px;
+	display: none;
+	width: 20px;
 `;
 
 const Explanation = styled.div`
-	position: absolute;
-	bottom: -20px;
+	width: 60px;
+	padding: 0 8px;
 	border-radius: 5px;
 	background-color: ${props => props.theme.black};
 	color: ${props => props.theme.white};
 	font-size: 10px;
-	padding: 0 8px;
-	transition: all 0.3s;
-	opacity: 0;
-
-	${ImgWrapper}:hover & {
-		transform: translateY(10px);
-		opacity: 1;
-	}
+	text-align: center;
 `;
 
 export default Preview;

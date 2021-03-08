@@ -13,11 +13,6 @@ const Footer = () => {
 			<Contact>
 				<Links>
 					<Link>
-						<A href="https://www.linkedin.com/in/sumin-kim-434279204/" target="_blank">
-							<Img src="https://img.icons8.com/ios/100/ffffff/linkedin-2--v1.png" alt="Linked In" />{' '}
-						</A>
-					</Link>
-					<Link>
 						<A href="mailto:suminkim.me@gmail.com">
 							<Img src="https://img.icons8.com/ios/100/ffffff/composing-mail.png" alt="Email" />{' '}
 						</A>
@@ -25,6 +20,11 @@ const Footer = () => {
 					<Link>
 						<A href="https://github.com/sumpson0-0" target="_blank">
 							<Img src="https://img.icons8.com/ios/100/ffffff/github-2.png" alt="Github" />
+						</A>
+					</Link>
+					<Link>
+						<A href="https://www.linkedin.com/in/sumin-kim-434279204/" target="_blank">
+							<Img src="https://img.icons8.com/ios/100/ffffff/linkedin-2--v1.png" alt="Linked In" />{' '}
 						</A>
 					</Link>
 					<Link>
@@ -44,41 +44,34 @@ const Container = styled.footer`
 	flex-direction: column;
 	justify-content: space-around;
 	height: 25vh;
-	padding: 50px 250px 0 250px;
+	padding: 30px 30px 0 30px;
 	background-color: ${props => props.theme.black};
 `;
 
 /* ----------- Contact ----------- */
 const Contact = styled.div`
-	padding: 0 250px;
+	padding: 0 20px;
 `;
 
 const Links = styled.ul`
 	display: flex;
-	justify-content: space-around;
-	padding: 0 25%;
+	justify-content: space-between;
 `;
 
 const Link = styled.li`
 	display: flex;
 	align-items: center;
 	width: fit-content;
-	font-size: 17px;
 	background-color: #353432;
 	cursor: pointer;
 	transition: all 0.3s;
-
-	&:hover {
-		background-color: ${props => props.theme.main};
-	}
 `;
 
 const A = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 15px;
-	width: fit-content;
+	margin: 10px;
 	color: #ababab;
 `;
 
@@ -88,8 +81,7 @@ const Img = styled.img`
 
 /* ----------- Copyright ----------- */
 const Copyright = styled.p`
-	text-align: end;
-	font-size: 14px;
+	font-size: 13px;
 	text-align: center;
 	color: ${props => props.theme.text};
 `;

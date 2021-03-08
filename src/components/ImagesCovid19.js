@@ -13,23 +13,23 @@ import mobileDashboard from '../assets/images/covid19/mobile-dashboard.png';
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<DesktopImg src={desktopHome} alt="Desktop Preview" />
-			<DesktopImg src={desktopAbout} alt="Desktop Preview" />
-			<DesktopImg src={desktopDashboard} alt="Desktop Preview" />
+			<img src={desktopHome} alt="Desktop Preview" />
+			<img src={desktopAbout} alt="Desktop Preview" />
+			<img src={desktopDashboard} alt="Desktop Preview" />
 		</Desktop>
 		<Tablet>
 			<BlockInTablet>
-				<TabletImg src={tabletHome} alt="Tablet Preview"></TabletImg>
-				<TabletImg src={tabletDashboard} alt="Tablet Preview"></TabletImg>
+				<img src={tabletHome} alt="Tablet Preview"></img>
+				<img src={tabletDashboard} alt="Tablet Preview"></img>
 			</BlockInTablet>
-			<TabletImg src={tabletAbout} alt="Tablet Preview"></TabletImg>
+			<img src={tabletAbout} alt="Tablet Preview"></img>
 		</Tablet>
 		<Mobile>
 			<BlockInMobile>
-				<MobileImg src={mobileHome} alt="Mobile Preview"></MobileImg>
-				<MobileImg src={mobileDashboard} alt="Mobile Preview"></MobileImg>
+				<img src={mobileHome} alt="Mobile Preview"></img>
+				<img src={mobileDashboard} alt="Mobile Preview"></img>
 			</BlockInMobile>
-			<MobileImg src={mobileAbout} alt="Mobile Preview"></MobileImg>
+			<img src={mobileAbout} alt="Mobile Preview"></img>
 		</Mobile>
 	</Container>
 );
@@ -44,7 +44,13 @@ const Container = styled.div`
 		background-color: #d9d7d4;
 	}
 	& > *:not(:last-child) {
-		margin-bottom: 80px;
+		margin-bottom: 50px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 5px;
 	}
 `;
 /* ----------- Desktop ----------- */
@@ -52,62 +58,33 @@ const Desktop = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 50px 15%;
-
+	padding: 3%;
 	& > *:not(:last-child) {
-		margin-bottom: 50px;
+		margin-bottom: 5%;
 	}
-`;
-
-const DesktopImg = styled.img`
-	width: 100%;
 `;
 
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
-	display: flex;
-	justify-content: space-between;
-	padding: 50px 10%;
-`;
-
-const TabletImg = styled.img`
-	width: 47%;
+	padding: 10%;
 `;
 
 const BlockInTablet = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 47%;
+	width: 100%;
 	& > * {
-		width: 100%;
-	}
-	& > *:first-child {
-		margin-bottom: 50px;
+		margin-bottom: 10%;
 	}
 `;
 
 /* ----------- Mobile ----------- */
 const Mobile = styled.div`
-	display: flex;
-	justify-content: space-around;
-	padding: 50px 15%;
-`;
-
-const MobileImg = styled.img`
-	width: 35%;
+	padding: 15%;
 `;
 
 const BlockInMobile = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 35%;
+	width: 100%;
 	& > * {
-		width: 100%;
-	}
-	& > *:first-child {
-		margin-bottom: 50px;
+		margin-bottom: 10%;
 	}
 `;
 

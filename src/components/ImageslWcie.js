@@ -2,28 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import desktopImage from '../assets/images/wcie/desktop-main.png';
 import tabletImage from '../assets/images/wcie/tablet-main.png';
-import mobileImage from '../assets/images/wcie/mobile-main.png';
 
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<DesktopImg src={desktopImage} alt="Desktop Preview" />
+			<img src={desktopImage} alt="Desktop Preview" />
 		</Desktop>
-		<ExceptDesktop>
-			<TabletImg src={tabletImage} alt="Tablet Preview"></TabletImg>
-			<MobileImg src={mobileImage} alt="Mobile Preview"></MobileImg>
-		</ExceptDesktop>
+		<Tablet>
+			<img src={tabletImage} alt="Tablet Preview"></img>
+		</Tablet>
 	</Container>
 );
 
 const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	& > * {
 		width: 100%;
 		border-radius: 5px;
 		background-color: #d9d7d4;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 5px;
 	}
 `;
 
@@ -31,27 +32,13 @@ const Container = styled.div`
 const Desktop = styled.div`
 	display: flex;
 	justify-content: center;
-	padding: 50px 15%;
-	margin-bottom: 80px;
+	padding: 3%;
+	margin-bottom: 50px;
 `;
 
-const DesktopImg = styled.img`
-	width: 100%;
-`;
-
-/* ----------- ExceptDesktop ----------- */
-const ExceptDesktop = styled.div`
-	display: flex;
-	justify-content: space-between;
-	padding: 50px 15%;
-`;
-
-const TabletImg = styled.img`
-	width: 50%;
-`;
-
-const MobileImg = styled.img`
-	width: 40%;
+/* ----------- Tablet ----------- */
+const Tablet = styled.div`
+	padding: 10%;
 `;
 
 export default Detail;

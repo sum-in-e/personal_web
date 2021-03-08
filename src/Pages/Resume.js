@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Resume = () => (
 	<Container>
-		<File href="https://drive.google.com/file/d/1SyQmH9ucO2lBSCrR_7CoCbRM2KziRl34/view?usp=sharing" target="_blank">
+		<File href="https://drive.google.com/file/d/122LEv2qKlFXRJA4WbKe3ASRAJk_lDRF3/view?usp=sharing" target="_blank">
 			<FileImg src="https://img.icons8.com/plasticine/100/000000/pdf.png" />
 			<FileName>Sumin-Kim-Resume-2021.pdf</FileName>
 			<Capacity>152KB</Capacity>
@@ -50,8 +50,8 @@ const Resume = () => (
 				React 중심의 프론트엔드 개발을 해왔습니다. ES6+ 이후의 문법에 익숙하며, UI/UX 디자인에 관심이 많습니다.
 				<br /> 읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다.
 				<br />
-				불필요한 요소의 배제 및 직관적인 UI/UX의 적용으로 사용자에게 쾌적한 환경을 제공하고, 개발자가 쉽게
-				서비스 구조를 파악하고 유지 보수할 수 있도록 가독성 높은 코드를 작성하고자 고민합니다.
+				직관적인 UI/UX를 적용하여 유저 입장에서 사용하기 쉬운 환경을 제공하고, 개발자가 쉽게 구조를 파악하고
+				서비스를 유지 보수할 수 있는 가독성 높은 코드를 작성하고자 고민합니다.
 				<br /> 일시적인 문제 해결 보다 근본적인 원인을 찾아 이를 이해하는 것을 우선시합니다.
 			</Text>
 		</Article>
@@ -63,8 +63,9 @@ const Resume = () => (
 					<InfoBlock>
 						<BlockTitle>Description</BlockTitle>
 						<Summary>
-							To Do 기록 웹 어플리케이션입니다. 이메일 인증, 마이 프로필, 할 일 추가 및 편집, 삭제, 완료가
-							가능하며 Firebase를 이용해 데이터 저장 및 웹 호스팅을 진행하였습니다.
+							To Do 기록 웹 어플리케이션입니다.
+							<br /> 이메일 인증, 마이 프로필, 할 일 추가 및 편집, 삭제, 완료가 가능하며 Firebase를 이용해
+							데이터 저장 및 웹 호스팅을 진행하였습니다.
 						</Summary>
 					</InfoBlock>
 					<InfoBlock>
@@ -129,16 +130,13 @@ const Resume = () => (
 const Container = styled.main`
 	position: relative;
 	min-height: 75vh;
-	margin: 60px 250px;
-	padding-top: 100px;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 16px;
+	padding: 150px 30px 30px;
 `;
 
 const Category = styled.h2`
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: 25px;
 	color: ${props => props.theme.main};
 `;
 
@@ -154,16 +152,15 @@ const Article = styled.article`
 const File = styled.a`
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: absolute;
-	top: 100px;
-	right: 0;
-	padding: 5px 10px;
+	bottom: 20px;
+	width: calc(100% - 60px);
+	padding: 10px;
+	background-color: #f1f3f5;
 	cursor: pointer;
 	& > *:not(:first-child) {
 		margin-left: 5px;
-	}
-	&:hover {
-		background-color: #f1f3f5;
 	}
 `;
 
@@ -173,7 +170,6 @@ const FileImg = styled.img`
 
 const FileName = styled.span`
 	font-weight: 300;
-	font-size: 15px;
 `;
 
 const Capacity = styled.span`
@@ -208,9 +204,7 @@ const Contact = styled.div`
 	margin-bottom: 20px;
 `;
 
-const Block = styled.div`
-	margin-left: 15px;
-`;
+const Block = styled.div``;
 
 const Head = styled.span``;
 
@@ -223,21 +217,19 @@ const Link = styled.a`
 	margin-left: 5px;
 	color: ${props => props.theme.text};
 	text-decoration: underline;
-	line-height: 30px;
+	line-height: 25px;
 `;
 
 /* ----------- Introduce ----------- */
 
 const Text = styled.p`
-	margin-top: 30px;
-	margin-left: 15px;
 	color: ${props => props.theme.text};
 `;
 
 /* ----------- Portfolio ----------- */
 const Project = styled.div`
 	margin-left: 15px;
-	margin-top: 40px;
+	margin-bottom: 30px;
 `;
 
 const ProjectName = styled.h3`
@@ -246,13 +238,12 @@ const ProjectName = styled.h3`
 `;
 
 const ProjectInfo = styled.div`
-	margin-left: 15px;
 	padding-left: 15px;
 	border-left: 1px solid ${props => props.theme.line};
 `;
 
 const InfoBlock = styled.div`
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 `;
 
 const BlockTitle = styled.p`
@@ -275,12 +266,10 @@ const ExternalLink = styled.a`
 
 /* ----------- Skill ----------- */
 
-const SkillWrapper = styled.div`
-	margin-top: 30px;
-`;
+const SkillWrapper = styled.div``;
 
 const SkillList = styled.ul`
-	margin-left: 20px;
+	margin-left: 10px;
 `;
 
 const Li = styled.li`
@@ -292,6 +281,7 @@ const Li = styled.li`
 const SkillCategory = styled.p`
 	margin-bottom: 5px;
 	font-weight: bold;
+	font-size: 16px;
 `;
 
 const Skill = styled.span`

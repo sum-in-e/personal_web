@@ -42,53 +42,50 @@ const NameCard = () => (
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	width: 100%;
 	height: 100%;
 	padding: 20px 30px;
 	border-radius: 3px;
-	background-color: #ffffff;
+	background-color: 	color: ${props => props.theme.white};
 	box-shadow: rgb(15 15 15 / 30%) 0px 0px 0px 1px, rgb(15 15 15 / 30%) 0px 2px 4px;
 `;
 
 /* ----------- Title Wrapper ----------- */
 const TitleWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
 	margin-bottom: 15px;
 `;
 
 const Name = styled.h1`
 	margin-bottom: 10px;
-	color: #000000;
+	color: ${props => props.theme.black};
 	font-family: 'ELAND_Choice_M';
 	font-size: 28px;
 `;
 
 const Occupation = styled.p`
-	margin-bottom: 5px;
-	font-size: 17px;
+	margin-bottom: 15px;
 	color: ${props => props.theme.text};
 `;
 
 const Line = styled.div`
 	width: 30px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid ${props => props.theme.black};
 `;
 
 /* ----------- Contact ----------- */
 const Contact = styled.div``;
 
-const Links = styled.ul`
-	display: flex;
-	flex-direction: column;
-`;
+const Links = styled.ul``;
 
 const Link = styled.li`
 	display: flex;
 	align-items: center;
-	font-size: 15px;
-	&:not(:first-child) {
-		margin-top: 2px;
-	}
+	margin-top: 2px;
 	& > img {
 		width: 22px;
 		height: 22px;
@@ -97,7 +94,6 @@ const Link = styled.li`
 `;
 
 const A = styled.a`
-	width: fit-content;
 	color: ${props => props.theme.text};
 	cursor: pointer;
 `;

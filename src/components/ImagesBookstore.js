@@ -14,20 +14,20 @@ import mobileDetail from '../assets/images/bookstore/mobile-detail.png';
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<DesktopImg src={desktopHome} alt="Desktop Preview" />
-			<DesktopImg src={desktopDetail} alt="Desktop Preview" />
-			<DesktopImg src={desktopSearch} alt="Desktop Preview" />
-			<DesktopImg src={desktopNoSearch} alt="Desktop Preview" />
+			<img src={desktopHome} alt="Desktop Preview" />
+			<img src={desktopDetail} alt="Desktop Preview" />
+			<img src={desktopSearch} alt="Desktop Preview" />
+			<img src={desktopNoSearch} alt="Desktop Preview" />
 		</Desktop>
 		<Tablet>
-			<TabletImg src={tabletHome} alt="Tablet Preview"></TabletImg>
-			<TabletImg src={tabletDetail} alt="Tablet Preview"></TabletImg>
-			<TabletImg src={tabletSearch} alt="Tablet Preview"></TabletImg>
+			<img src={tabletHome} alt="Tablet Preview"></img>
+			<img src={tabletDetail} alt="Tablet Preview"></img>
+			<img src={tabletSearch} alt="Tablet Preview"></img>
 		</Tablet>
 		<Mobile>
-			<MobileImg src={mobileHome} alt="Mobile Preview"></MobileImg>
-			<MobileImg src={mobileDetail} alt="Mobile Preview"></MobileImg>
-			<MobileImg src={mobileSearch} alt="Mobile Preview"></MobileImg>
+			<img src={mobileHome} alt="Mobile Preview"></img>
+			<img src={mobileDetail} alt="Mobile Preview"></img>
+			<img src={mobileSearch} alt="Mobile Preview"></img>
 		</Mobile>
 	</Container>
 );
@@ -42,7 +42,13 @@ const Container = styled.div`
 		background-color: #d9d7d4;
 	}
 	& > *:not(:last-child) {
-		margin-bottom: 80px;
+		margin-bottom: 50px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 5px;
 	}
 `;
 
@@ -51,47 +57,26 @@ const Desktop = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 50px 15%;
-
+	padding: 3%;
 	& > *:not(:last-child) {
-		margin-bottom: 50px;
+		margin-bottom: 5%;
 	}
-`;
-
-const DesktopImg = styled.img`
-	width: 100%;
 `;
 
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 50px 15%;
+	padding: 10%;
 	& > *:not(:last-child) {
-		margin-bottom: 50px;
+		margin-bottom: 10%;
 	}
-`;
-
-const TabletImg = styled.img`
-	width: 60%;
 `;
 
 /* ----------- Mobile ----------- */
 const Mobile = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 50px 15%;
+	padding: 15%;
 	& > *:not(:last-child) {
-		margin-bottom: 50px;
+		margin-bottom: 10%;
 	}
-`;
-
-const MobileImg = styled.img`
-	width: 40%;
 `;
 
 export default Detail;

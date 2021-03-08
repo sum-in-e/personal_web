@@ -14,23 +14,23 @@ import mobileDetail from '../assets/images/vanillaSearchMovie/mobile-detail.png'
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<DesktopImg src={desktopMain} alt="Desktop Preview" />
-			<DesktopImg src={desktopSearch} alt="Desktop Preview" />
-			<DesktopImg src={desktopResults} alt="Desktop Preview" />
-			<DesktopImg src={desktopDetail} alt="Desktop Preview" />
+			<img src={desktopMain} alt="Desktop Preview" />
+			<img src={desktopSearch} alt="Desktop Preview" />
+			<img src={desktopResults} alt="Desktop Preview" />
+			<img src={desktopDetail} alt="Desktop Preview" />
 		</Desktop>
 		<Tablet>
 			<BlockInTablet>
-				<TabletImg src={tabletMain} alt="Tablet Preview"></TabletImg>
-				<TabletImg src={tabletDetail} alt="Tablet Preview"></TabletImg>
+				<img src={tabletMain} alt="Tablet Preview"></img>
+				<img src={tabletDetail} alt="Tablet Preview"></img>
 			</BlockInTablet>
-			<TabletImg src={tabletSearch} alt="Tablet Preview"></TabletImg>
+			<img src={tabletSearch} alt="Tablet Preview"></img>
 		</Tablet>
 		<Mobile>
-			<MobileImg src={mobileSearch} alt="Mobile Preview"></MobileImg>
+			<img src={mobileSearch} alt="Mobile Preview"></img>
 			<BlockInMobile>
-				<MobileImg src={mobileMain} alt="Mobile Preview"></MobileImg>
-				<MobileImg src={mobileDetail} alt="Mobile Preview"></MobileImg>
+				<img src={mobileMain} alt="Mobile Preview"></img>
+				<img src={mobileDetail} alt="Mobile Preview"></img>
 			</BlockInMobile>
 		</Mobile>
 	</Container>
@@ -46,7 +46,13 @@ const Container = styled.div`
 		background-color: #d9d7d4;
 	}
 	& > *:not(:last-child) {
-		margin-bottom: 80px;
+		margin-bottom: 50px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		border-radius: 5px;
 	}
 `;
 
@@ -55,65 +61,37 @@ const Desktop = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 50px 15%;
+	padding: 3%;
 
 	& > *:not(:last-child) {
-		margin-bottom: 50px;
+		margin-bottom: 5%;
 	}
-`;
-
-const DesktopImg = styled.img`
-	width: 100%;
 `;
 
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
-	display: flex;
-	justify-content: space-between;
-	padding: 50px 10%;
-`;
-
-const TabletImg = styled.img`
-	width: 47%;
+	padding: 10%;
 `;
 
 const BlockInTablet = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 47%;
-
+	width: 100%;
 	& > * {
-		width: 100%;
-	}
-
-	& > *:first-child {
-		margin-bottom: 50px;
+		margin-bottom: 10%;
 	}
 `;
 
 /* ----------- Mobile ----------- */
 const Mobile = styled.div`
-	display: flex;
-	justify-content: space-around;
-	padding: 50px 10%;
-`;
-
-const MobileImg = styled.img`
-	width: 35%;
+	padding: 15%;
+	& > *:first-child {
+		margin-bottom: 10%;
+	}
 `;
 
 const BlockInMobile = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 35%;
-	& > * {
-		width: 100%;
-	}
+	width: 100%;
 	& > *:first-child {
-		margin-bottom: 50px;
-		width: 100%;
+		margin-bottom: 10%;
 	}
 `;
 
