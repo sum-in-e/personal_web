@@ -84,12 +84,20 @@ const Desktop = styled.div`
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
 	padding: 10%;
+	@media ${props => props.theme.m} {
+		padding: 5% 15%;
+	}
 `;
 
 const BlockInTablet = styled.div`
 	width: 100%;
 	& > * {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		& > * {
+			margin-bottom: 5%;
+		}
 	}
 `;
 
@@ -98,18 +106,34 @@ const BlockInTablet2 = styled.div`
 	& > *:first-child {
 		margin-bottom: 10%;
 	}
+	@media ${props => props.theme.m} {
+		& > *:first-child {
+			margin-bottom: 5%;
+		}
+	}
 `;
 
 /* ----------- Mobile ----------- */
 const Mobile = styled.div`
 	padding: 15%;
+	@media ${props => props.theme.m} {
+		display: flex;
+		justify-content: space-between;
+
+		padding: 5%;
+		img {
+			height: auto;
+		}
+	}
 `;
 
 const BlockInMobile = styled.div`
 	width: 100%;
-
 	& > * {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		width: 47%;
 	}
 `;
 
@@ -118,6 +142,13 @@ const BlockInMobile2 = styled.div`
 
 	& > *:first-child {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		width: 47%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 55% 0;
 	}
 `;
 

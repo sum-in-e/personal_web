@@ -39,6 +39,9 @@ const Desktop = styled.div`
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
 	padding: 10%;
+	@media ${props => props.theme.m} {
+		padding: 5% 15%;
+	}
 `;
 
 export default Detail;

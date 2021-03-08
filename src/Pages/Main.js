@@ -4,7 +4,6 @@ import NameCard from '../components/NameCard';
 
 const Main = () => (
 	<Container>
-		<Greeting>Hi, there!</Greeting>
 		<Section>
 			<NameCard />
 		</Section>
@@ -21,11 +20,6 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 90px 60px 30px 60px;
 	}
-`;
-
-const Greeting = styled.p`
-	display: none;
-	font-family: 'ELAND_Choice_M';
 `;
 
 const Section = styled.section`

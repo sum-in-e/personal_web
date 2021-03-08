@@ -71,12 +71,20 @@ const Desktop = styled.div`
 /* ----------- Tablet ----------- */
 const Tablet = styled.div`
 	padding: 10%;
+	@media ${props => props.theme.m} {
+		padding: 5% 15%;
+	}
 `;
 
 const BlockInTablet = styled.div`
 	width: 100%;
 	& > * {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		& > * {
+			margin-bottom: 5%;
+		}
 	}
 `;
 
@@ -86,12 +94,32 @@ const Mobile = styled.div`
 	& > *:first-child {
 		margin-bottom: 10%;
 	}
+
+	@media ${props => props.theme.m} {
+		display: flex;
+		justify-content: space-between;
+		padding: 5%;
+		& > *:first-child {
+			width: 47%;
+			margin: 0;
+		}
+	}
 `;
 
 const BlockInMobile = styled.div`
 	width: 100%;
 	& > *:first-child {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 47%;
+		padding: 25% 0;
+		img {
+			height: auto;
+		}
 	}
 `;
 

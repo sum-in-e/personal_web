@@ -69,6 +69,12 @@ const Tablet = styled.div`
 	& > *:not(:last-child) {
 		margin-bottom: 10%;
 	}
+	@media ${props => props.theme.m} {
+		padding: 5% 15%;
+		& > *:not(:last-child) {
+			margin-bottom: 5%;
+		}
+	}
 `;
 
 /* ----------- Mobile ----------- */
@@ -76,6 +82,12 @@ const Mobile = styled.div`
 	padding: 15%;
 	& > *:not(:last-child) {
 		margin-bottom: 10%;
+	}
+	@media ${props => props.theme.m} {
+		padding: 5% 30%;
+		& > *:not(:last-child) {
+			margin-bottom: 5%;
+		}
 	}
 `;
 

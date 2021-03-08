@@ -50,6 +50,9 @@ const Container = styled.footer`
 		height: 35vh;
 		padding: 15px 60px 0 60px;
 	}
+	@media ${props => props.theme.m} {
+		height: 15vh;
+	}
 `;
 
 /* ----------- Contact ----------- */

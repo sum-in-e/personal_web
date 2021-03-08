@@ -159,6 +159,9 @@ const Section = styled.section`
 	@media ${props => props.theme.s} {
 		padding-top: 30px;
 	}
+	@media ${props => props.theme.m} {
+		padding-top: 70px;
+	}
 `;
 
 /* --------------------------- 재사용 --------------------------- */
@@ -174,6 +177,9 @@ const Category = styled.h2`
 	font-size: 25px;
 	font-weight: bold;
 	color: ${props => props.theme.black};
+	@media ${props => props.theme.m} {
+		font-size: 22px;
+	}
 `;
 
 const Summary = styled.p`
@@ -198,6 +204,10 @@ const Resume = styled(Link)`
 		top: 90px;
 		right: 60px;
 		font-size: 20px;
+		padding: 5px 0px;
+	}
+	@media ${props => props.theme.m} {
+		font-size: 18px;
 		padding: 5px 0px;
 	}
 `;
