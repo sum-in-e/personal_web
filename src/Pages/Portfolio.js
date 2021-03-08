@@ -19,8 +19,10 @@ const Portfolio = () => {
 };
 
 const Container = styled.main`
-	min-height: 75vh;
 	padding: 130px 30px 30px;
+	@media ${props => props.theme.s} {
+		padding: 90px 60px 30px 60px;
+	}
 `;
 
 const PreviewList = styled.section`

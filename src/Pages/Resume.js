@@ -129,8 +129,10 @@ const Resume = () => (
 
 const Container = styled.main`
 	position: relative;
-	min-height: 75vh;
 	padding: 150px 30px 30px;
+	@media ${props => props.theme.s} {
+		padding: 120px 60px 30px 60px;
+	}
 `;
 
 const Category = styled.h2`
@@ -161,6 +163,9 @@ const File = styled.a`
 	cursor: pointer;
 	& > *:not(:first-child) {
 		margin-left: 5px;
+	}
+	@media ${props => props.theme.s} {
+		width: calc(100% - 120px);
 	}
 `;
 

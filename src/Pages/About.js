@@ -149,10 +149,16 @@ const About = () => {
 const Container = styled.main`
 	padding: 130px 30px 30px;
 	position: relative;
+	@media ${props => props.theme.s} {
+		padding: 90px 60px 30px 60px;
+	}
 `;
 
 const Section = styled.section`
 	padding-top: 70px;
+	@media ${props => props.theme.s} {
+		padding-top: 30px;
+	}
 `;
 
 /* --------------------------- 재사용 --------------------------- */
@@ -188,6 +194,12 @@ const Resume = styled(Link)`
 	font-size: 17px;
 	color: ${props => props.theme.text};
 	cursor: pointer;
+	@media ${props => props.theme.s} {
+		top: 90px;
+		right: 60px;
+		font-size: 20px;
+		padding: 5px 0px;
+	}
 `;
 
 /* --------------------------- PROFILE --------------------------- */

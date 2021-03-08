@@ -18,6 +18,9 @@ const Container = styled.main`
 	justify-content: center;
 	height: 100vh;
 	padding: 130px 30px 30px;
+	@media ${props => props.theme.s} {
+		padding: 90px 60px 30px 60px;
+	}
 `;
 
 const Greeting = styled.p`
@@ -28,6 +31,11 @@ const Greeting = styled.p`
 const Section = styled.section`
 	height: 300px;
 	width: 100%;
+
+	@media ${props => props.theme.s} {
+		height: 230px;
+		width: 60%;
+	}
 `;
 
 export default Main;

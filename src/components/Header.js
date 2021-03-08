@@ -48,6 +48,12 @@ const Container = styled.header`
 	font-family: 'ELAND_Choice_M';
 	font-size: 20px;
 	z-index: 10;
+
+	@media ${props => props.theme.s} {
+		flex-direction: row;
+		height: 60px;
+		padding: 0 60px;
+	}
 `;
 
 /* ----------- Logo ----------- */
@@ -61,6 +67,10 @@ const Title = styled.h1``;
 /* ----------- nav ----------- */
 const Nav = styled.nav`
 	width: 100%;
+
+	@media ${props => props.theme.s} {
+		width: 300px;
+	}
 `;
 
 const Ul = styled.ul`

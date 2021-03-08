@@ -46,11 +46,18 @@ const Container = styled.footer`
 	height: 25vh;
 	padding: 30px 30px 0 30px;
 	background-color: ${props => props.theme.black};
+	@media ${props => props.theme.s} {
+		height: 35vh;
+		padding: 15px 60px 0 60px;
+	}
 `;
 
 /* ----------- Contact ----------- */
 const Contact = styled.div`
 	padding: 0 20px;
+	@media ${props => props.theme.s} {
+		padding: 0 210px;
+	}
 `;
 
 const Links = styled.ul`

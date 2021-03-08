@@ -49,6 +49,10 @@ const Container = styled.div`
 	border-radius: 3px;
 	background-color: 	color: ${props => props.theme.white};
 	box-shadow: rgb(15 15 15 / 30%) 0px 0px 0px 1px, rgb(15 15 15 / 30%) 0px 2px 4px;
+	@media ${props => props.theme.s} {
+		justify-content : flex-end;
+		padding : 20px;
+	}
 `;
 
 /* ----------- Title Wrapper ----------- */
@@ -58,6 +62,10 @@ const TitleWrapper = styled.div`
 	align-items: center;
 	margin-top: 30px;
 	margin-bottom: 15px;
+	@media ${props => props.theme.s} {
+		align-items: flex-start;
+		margin-top: 0;
+	}
 `;
 
 const Name = styled.h1`

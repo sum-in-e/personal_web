@@ -20,9 +20,9 @@ const globalStyle = createGlobalStyle`
         word-wrap : break-word;
     }
     html, body{
-        overflow-x : hidden;
         font-family: 'NanumSquare', sans-serif;  
         font-size : 15px;
+        -webkit-text-size-adjust :none;
         line-height : 20px;
         background-color : ${props => props.theme.white};
     }

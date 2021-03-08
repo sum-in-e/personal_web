@@ -75,11 +75,17 @@ const Detail = () => {
 
 const Container = styled.main`
 	padding: 130px 30px 30px;
+	@media ${props => props.theme.s} {
+		padding: 90px 60px 30px 60px;
+	}
 `;
 
 const Section = styled.section`
 	position: relative;
 	padding-top: 150px;
+	@media ${props => props.theme.s} {
+		padding-top: 120px;
+	}
 `;
 
 /* ----------- 재사용 ----------- */
