@@ -76,7 +76,7 @@ const Tablet = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
-		padding: 5% 15%;
+		padding: 5% 25%;
 		& > *:not(:last-child) {
 			margin-bottom: 5%;
 		}
@@ -90,7 +90,7 @@ const Mobile = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
-		padding: 5% 30%;
+		padding: 5% 35%;
 		& > *:not(:last-child) {
 			margin-bottom: 5%;
 		}

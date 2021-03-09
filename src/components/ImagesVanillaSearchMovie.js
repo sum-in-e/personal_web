@@ -78,7 +78,13 @@ const Desktop = styled.div`
 const Tablet = styled.div`
 	padding: 10%;
 	@media ${props => props.theme.m} {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		padding: 5% 15%;
+		& > *:last-child {
+			width: 70%;
+		}
 	}
 `;
 
@@ -88,6 +94,7 @@ const BlockInTablet = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
+		width: 70%;
 		& > * {
 			margin-bottom: 5%;
 		}
@@ -103,10 +110,10 @@ const Mobile = styled.div`
 
 	@media ${props => props.theme.m} {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		padding: 5%;
 		& > *:first-child {
-			width: 47%;
+			width: 35%;
 			margin: 0;
 		}
 	}
@@ -120,9 +127,8 @@ const BlockInMobile = styled.div`
 	@media ${props => props.theme.m} {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		width: 47%;
-		padding: 25% 0;
+		justify-content: center;
+		width: 35%;
 		img {
 			height: auto;
 		}

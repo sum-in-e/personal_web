@@ -91,6 +91,9 @@ const Desktop = styled.div`
 const Tablet = styled.div`
 	padding: 10%;
 	@media ${props => props.theme.m} {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		padding: 5% 15%;
 	}
 `;
@@ -101,6 +104,7 @@ const BlockInTablet = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
+		width: 70%;
 		& > * {
 			margin-bottom: 5%;
 		}
@@ -113,6 +117,7 @@ const BlockInTablet2 = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
+		width: 70%;
 		& > *:first-child {
 			margin-bottom: 5%;
 		}
@@ -124,7 +129,7 @@ const Mobile = styled.div`
 	padding: 15%;
 	@media ${props => props.theme.m} {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 
 		padding: 5%;
 		img {
@@ -139,7 +144,7 @@ const BlockInMobile = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
-		width: 47%;
+		width: 35%;
 	}
 `;
 
@@ -150,11 +155,10 @@ const BlockInMobile2 = styled.div`
 		margin-bottom: 10%;
 	}
 	@media ${props => props.theme.m} {
-		width: 47%;
+		width: 35%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		padding: 55% 0;
+		justify-content: center;
 	}
 `;
 
