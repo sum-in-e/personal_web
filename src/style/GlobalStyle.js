@@ -23,8 +23,14 @@ const globalStyle = createGlobalStyle`
         font-family: 'NanumSquare', sans-serif;  
         font-size : 15px;
         -webkit-text-size-adjust :none;
+        -webkit-tap-highlight-color:transparent;
         line-height : 20px;
         background-color : ${props => props.theme.white};
+
+        @media ${props => props.theme.l} {
+		    font-size : 17px;
+            line-height : 23px;
+	    }
     }
 `;
 

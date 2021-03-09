@@ -138,7 +138,9 @@ const About = () => {
 							<br />
 							빠른 시일 내에 답장을 드리겠습니다.
 						</ContactText>
-						<EmailForm />
+						<FormWrapper>
+							<EmailForm />
+						</FormWrapper>
 					</Content>
 				</Section>
 			</Container>
@@ -182,11 +184,6 @@ const Category = styled.h2`
 	}
 `;
 
-const Summary = styled.p`
-	font-size: 14px;
-	color: ${props => props.theme.text};
-`;
-
 /* --------------------------- Resume --------------------------- */
 const Resume = styled(Link)`
 	position: absolute;
@@ -208,7 +205,9 @@ const Resume = styled(Link)`
 	}
 	@media ${props => props.theme.m} {
 		font-size: 18px;
-		padding: 5px 0px;
+	}
+	@media ${props => props.theme.l} {
+		padding: 2px 0px;
 	}
 `;
 
@@ -217,13 +216,20 @@ const ProfileText = styled.p`
 	line-height: 22px;
 	word-break: normal;
 	color: ${props => props.theme.text};
+	@media ${props => props.theme.l} {
+		line-height: inherit;
+	}
 `;
 
 /* --------------------------- 이러한 것들을 중요시해요. --------------------------- */
 const Important = styled.div`
 	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-template-columns: repeat(4, 1fr);
+	@media ${props => props.theme.l} {
+		margin: 0 auto;
+		gap: 10px;
+	}
 `;
 
 const Block = styled.div`
@@ -255,12 +261,25 @@ const Title = styled.h3`
 	font-weight: 700;
 `;
 
+const Summary = styled.p`
+	font-size: 14px;
+	color: ${props => props.theme.text};
+	@media ${props => props.theme.l} {
+		font-size: 15px;
+	}
+`;
+
 /* --------------------------- SKILLS --------------------------- */
 const Skills = styled.ul`
 	display: grid;
 	grid-template-rows: repeat(5, auto);
 	grid-template-columns: 1fr;
 	gap: 25px;
+	@media ${props => props.theme.l} {
+		grid-template-rows: repeat(2, auto);
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
 `;
 
 const Skill = styled.li`
@@ -285,7 +304,13 @@ const Name = styled.h3`
 	font-size: 17px;
 `;
 
-const SkillSummary = styled.ul``;
+const SkillSummary = styled.ul`
+	@media ${props => props.theme.l} {
+		width: 85%;
+		margin: 0 auto;
+		font-size: 15px;
+	}
+`;
 
 const Li = styled.li`
 	margin-bottom: 5px;
@@ -304,6 +329,11 @@ const Li = styled.li`
 const ContactText = styled.p`
 	font-size: 13px;
 	color: ${props => props.theme.text};
+	@media ${props => props.theme.m} {
+		font-size: inherit;
+	}
 `;
+
+const FormWrapper = styled.div``;
 
 export default About;

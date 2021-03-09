@@ -30,6 +30,10 @@ const Section = styled.section`
 		height: 230px;
 		width: 60%;
 	}
+	@media ${props => props.theme.l} {
+		height: 250px;
+		width: 47%;
+	}
 `;
 
 export default Main;

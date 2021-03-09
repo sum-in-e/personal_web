@@ -86,6 +86,9 @@ const Section = styled.section`
 	@media ${props => props.theme.s} {
 		padding-top: 120px;
 	}
+	@media ${props => props.theme.l} {
+		padding-top: 200px;
+	}
 `;
 
 /* ----------- 재사용 ----------- */
@@ -99,6 +102,9 @@ const Category = styled.h2`
 	margin-bottom: 10px;
 	border-bottom: 1px solid ${props => props.theme.line};
 	font-size: 18px;
+	@media ${props => props.theme.l} {
+		font-size: 20px;
+	}
 `;
 
 /* ----------- Links ----------- */
@@ -144,6 +150,9 @@ const Description = styled.p`
 	white-space: pre-wrap;
 	line-height: 22px;
 	color: ${props => props.theme.text};
+	@media ${props => props.theme.l} {
+		line-height: inherit;
+	}
 `;
 
 const PointWrapper = styled.ul`

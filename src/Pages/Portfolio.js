@@ -23,6 +23,11 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 90px 60px 30px 60px;
 	}
+	@media ${props => props.theme.l} {
+		display: flex;
+		align-items: center;
+		min-height: 80vh;
+	}
 `;
 
 const PreviewList = styled.section`

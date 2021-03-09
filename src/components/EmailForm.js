@@ -95,6 +95,9 @@ const Form = styled.form`
 	padding: 10px 20px;
 	border-radius: 3px;
 	box-shadow: rgb(15 15 15 / 30%) 0px 0px 0px 1px, rgb(15 15 15 / 30%) 0px 2px 4px;
+	@media ${props => props.theme.l} {
+		padding: 15px;
+	}
 `;
 
 const InputWrapper = styled.div`
@@ -110,6 +113,17 @@ const InputWrapper = styled.div`
 		font-size: 13px;
 		margin-bottom: 3px;
 	}
+	@media ${props => props.theme.l} {
+		justify-content: space-between;
+		flex-direction: row;
+		label {
+			margin: 10px 15px 0 0;
+			font-size: 15px;
+		}
+		input {
+			width: 88%;
+		}
+	}
 `;
 const Span = styled.span`
 	color: red;
@@ -121,10 +135,17 @@ const Input = styled.input`
 	outline-color: ${props => props.theme.main};
 `;
 
-const MessageInput = styled.input`
+const MessageInput = styled.textarea`
 	height: 150px;
 	outline-color: ${props => props.theme.main};
+	border: 1px solid ${props => props.theme.line};
+	border-radius: 3px;
+	padding: 5px;
+	-webkit-appearance: none;
 	box-shadow: none;
+	@media ${props => props.theme.l} {
+		width: 88%;
+	}
 `;
 
 const SubmitBtn = styled.button`

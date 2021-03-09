@@ -167,6 +167,13 @@ const File = styled.a`
 	@media ${props => props.theme.s} {
 		width: calc(100% - 120px);
 	}
+	@media ${props => props.theme.l} {
+		right: 60px;
+		top: 120px;
+		width: fit-content;
+		height: fit-content;
+		padding: 5px 20px;
+	}
 `;
 
 const FileImg = styled.img`

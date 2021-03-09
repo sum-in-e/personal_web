@@ -53,6 +53,9 @@ const Container = styled.footer`
 	@media ${props => props.theme.m} {
 		height: 15vh;
 	}
+	@media ${props => props.theme.l} {
+		height: 20vh;
+	}
 `;
 
 /* ----------- Contact ----------- */
@@ -60,6 +63,9 @@ const Contact = styled.div`
 	padding: 0 20px;
 	@media ${props => props.theme.s} {
 		padding: 0 210px;
+	}
+	@media ${props => props.theme.l} {
+		padding: 0 330px;
 	}
 `;
 

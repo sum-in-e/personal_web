@@ -54,6 +54,9 @@ const Container = styled.div`
 		object-fit: contain;
 		border-radius: 5px;
 	}
+	@media ${props => props.theme.l} {
+		padding: 0 100px;
+	}
 `;
 
 /* ----------- Desktop ----------- */
