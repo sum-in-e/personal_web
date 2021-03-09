@@ -87,6 +87,11 @@ const Link = styled.li`
 	background-color: #353432;
 	cursor: pointer;
 	transition: all 0.3s;
+	@media ${props => props.theme.xl} {
+		&:hover {
+			background-color: ${props => props.theme.main};
+		}
+	}
 `;
 
 const A = styled.a`
