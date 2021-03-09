@@ -84,6 +84,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xxl} {
 		padding: 110px 150px 50px 150px;
 	}
+	@media ${props => props.theme.xxxl} {
+		padding: 110px 300px 50px 300px;
+	}
 `;
 
 const Section = styled.section`

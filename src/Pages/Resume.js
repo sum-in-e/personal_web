@@ -139,6 +139,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xxl} {
 		padding: 150px 150px 30px 150px;
 	}
+	@media ${props => props.theme.xxxl} {
+		padding: 150px 300px 30px 300px;
+	}
 `;
 
 const Category = styled.h2`
@@ -191,6 +194,9 @@ const File = styled.a`
 	}
 	@media ${props => props.theme.xxl} {
 		right: 150px;
+	}
+	@media ${props => props.theme.xxxl} {
+		right: 300px;
 	}
 `;
 

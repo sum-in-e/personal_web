@@ -60,6 +60,9 @@ const Container = styled.header`
 	@media ${props => props.theme.xxl} {
 		padding: 0 150px;
 	}
+	@media ${props => props.theme.xxxl} {
+		padding: 0 300px;
+	}
 `;
 
 /* ----------- Logo ----------- */

@@ -163,6 +163,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xxl} {
 		padding: 110px 150px 50px 150px;
 	}
+	@media ${props => props.theme.xxxl} {
+		padding: 110px 300px 50px 300px;
+	}
 `;
 
 const Section = styled.section`
@@ -232,10 +235,14 @@ const Resume = styled(Link)`
 		}
 	}
 	@media ${props => props.theme.xxl} {
+		top: 110px;
 		right: 150px;
 		width: 120px;
 		padding: 5px 15px;
 		font-size: 20px;
+	}
+	@media ${props => props.theme.xxxl} {
+		right: 300px;
 	}
 `;
 

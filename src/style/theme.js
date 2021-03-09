@@ -13,6 +13,9 @@ const size = {
 
 	// XX-Large devices (larger desktops, 1400px and up)
 	xxl: '1400px',
+
+	// XX-Large devices (larger desktops, 1650px and up)
+	xxxl: '1650px',
 };
 
 const theme = {
@@ -27,6 +30,7 @@ const theme = {
 	l: `(min-width:${size.l})`,
 	xl: `(min-width:${size.xl})`,
 	xxl: `(min-width:${size.xxl})`,
+	xxxl: `(min-width:${size.xxxl})`,
 };
 
 export default theme;

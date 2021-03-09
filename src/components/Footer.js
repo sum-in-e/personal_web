@@ -57,11 +57,14 @@ const Container = styled.footer`
 	@media ${props => props.theme.xxl} {
 		padding: 15px 150px 0 150px;
 	}
+	@media ${props => props.theme.xxxl} {
+		padding: 15px 300px 0 300px;
+	}
 `;
 
 /* ----------- Contact ----------- */
 const Contact = styled.div`
-	width: 250px;
+	width: 280px;
 `;
 
 const Links = styled.ul`
