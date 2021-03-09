@@ -135,10 +135,11 @@ const Input = styled.input`
 	font-family: 'NanumSquare', sans-serif;
 	@media ${props => props.theme.l} {
 		width: 88%;
+		height: 50px;
+		font-size: 14px;
 	}
 	@media ${props => props.theme.xxl} {
 		width: 90%;
-		height: 50px;
 		font-size: 15px;
 	}
 `;
