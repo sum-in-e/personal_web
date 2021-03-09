@@ -23,10 +23,12 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 90px 60px 30px 60px;
 	}
+	@media ${props => props.theme.m} {
+		min-height: calc(100vh - 160px);
+	}
 	@media ${props => props.theme.l} {
 		display: flex;
 		align-items: center;
-		min-height: 80vh;
 	}
 	@media ${props => props.theme.xl} {
 		padding: 90px 90px 30px 90px;

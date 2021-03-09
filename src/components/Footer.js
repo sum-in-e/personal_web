@@ -43,18 +43,12 @@ const Container = styled.footer`
 	display: ${props => (props.isMainPage ? 'none' : 'flex')};
 	flex-direction: column;
 	justify-content: space-around;
-	height: 25vh;
+	height: 180px;
 	padding: 30px 30px 0 30px;
 	background-color: ${props => props.theme.black};
 	@media ${props => props.theme.s} {
-		height: 35vh;
+		height: 160px;
 		padding: 15px 60px 0 60px;
-	}
-	@media ${props => props.theme.m} {
-		height: 15vh;
-	}
-	@media ${props => props.theme.l} {
-		height: 20vh;
 	}
 	@media ${props => props.theme.xl} {
 		padding: 15px 90px 0 90px;
