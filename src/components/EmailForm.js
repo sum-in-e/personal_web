@@ -81,10 +81,13 @@ const EmailForm = () => {
 					required
 				/>
 			</InputWrapper>
-			<SubmitBtn>보내기</SubmitBtn>
+			<SubmitWrapper>
+				<SubmitBtn>보내기</SubmitBtn>
+			</SubmitWrapper>
 		</Form>
 	);
 };
+
 const Form = styled.form`
 	display: flex;
 	flex-direction: column;
@@ -166,6 +169,13 @@ const MessageInput = styled.textarea`
 	}
 `;
 
+const SubmitWrapper = styled.div`
+	@media ${props => props.theme.l} {
+		display: flex;
+		justify-content: flex-end;
+	}
+`;
+
 const SubmitBtn = styled.button`
 	width: 100%;
 	padding: 10px 0;
@@ -176,6 +186,9 @@ const SubmitBtn = styled.button`
 	line-height: 20px;
 	color: ${props => props.theme.white};
 	outline-color: ${props => props.theme.main};
+	@media ${props => props.theme.l} {
+		width: 180px;
+	}
 	@media ${props => props.theme.xl} {
 		cursor: pointer;
 	}
