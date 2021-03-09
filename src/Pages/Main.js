@@ -23,6 +23,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xl} {
 		padding: 90px 90px 30px 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 110px 150px 50px 150px;
+	}
 `;
 
 const Section = styled.section`
@@ -39,6 +42,10 @@ const Section = styled.section`
 	}
 	@media ${props => props.theme.xl} {
 		width: 42%;
+	}
+	@media ${props => props.theme.xxl} {
+		height: 270px;
+		width: 40%;
 	}
 `;
 

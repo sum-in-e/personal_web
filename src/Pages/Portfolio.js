@@ -31,6 +31,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xl} {
 		padding: 90px 90px 30px 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 110px 250px 50px 250px;
+	}
 `;
 
 const PreviewList = styled.section`

@@ -57,6 +57,9 @@ const Container = styled.header`
 	@media ${props => props.theme.xl} {
 		padding: 0 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 0 150px;
+	}
 `;
 
 /* ----------- Logo ----------- */
@@ -74,6 +77,9 @@ const Nav = styled.nav`
 	@media ${props => props.theme.s} {
 		width: 300px;
 	}
+	@media ${props => props.theme.xxl} {
+		width: 350px;
+	}
 `;
 
 const Ul = styled.ul`
@@ -85,6 +91,9 @@ const Li = styled.li`
 	color: ${props => (props.isPainting ? props.theme.main : 'none')};
 	font-size: 17px;
 	cursor: pointer;
+	@media ${props => props.theme.xxl} {
+		font-size: inherit;
+	}
 `;
 
 const GoToLink = styled(Link)``;

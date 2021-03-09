@@ -157,6 +157,12 @@ const Container = styled.main`
 	@media ${props => props.theme.xl} {
 		padding: 90px 90px 30px 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 90px 150px 30px 150px;
+	}
+	@media ${props => props.theme.xxl} {
+		padding: 110px 150px 50px 150px;
+	}
 `;
 
 const Section = styled.section`
@@ -225,6 +231,12 @@ const Resume = styled(Link)`
 			color: ${props => props.theme.white};
 		}
 	}
+	@media ${props => props.theme.xxl} {
+		right: 150px;
+		width: 120px;
+		padding: 5px 15px;
+		font-size: 20px;
+	}
 `;
 
 /* --------------------------- PROFILE --------------------------- */
@@ -234,6 +246,9 @@ const ProfileText = styled.p`
 	color: ${props => props.theme.text};
 	@media ${props => props.theme.l} {
 		line-height: inherit;
+	}
+	@media ${props => props.theme.xxl} {
+		width: 90%;
 	}
 `;
 
@@ -315,6 +330,9 @@ const Skills = styled.ul`
 		grid-template-rows: auto;
 		grid-template-columns: repeat(5, 1fr);
 	}
+	@media ${props => props.theme.xxl} {
+		gap: 15px;
+	}
 `;
 
 const Skill = styled.li`
@@ -347,6 +365,9 @@ const SkillSummary = styled.ul`
 	}
 	@media ${props => props.theme.xl} {
 		width: 90%;
+	}
+	@media ${props => props.theme.xxl} {
+		width: 100%;
 	}
 `;
 

@@ -59,6 +59,9 @@ const Container = styled.footer`
 	@media ${props => props.theme.xl} {
 		padding: 15px 90px 0 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 15px 150px 0 150px;
+	}
 `;
 
 /* ----------- Contact ----------- */
@@ -72,6 +75,9 @@ const Contact = styled.div`
 	}
 	@media ${props => props.theme.xl} {
 		padding: 0 400px;
+	}
+	@media ${props => props.theme.xxl} {
+		padding: 0 38%;
 	}
 `;
 
@@ -110,7 +116,7 @@ const Img = styled.img`
 const Copyright = styled.p`
 	font-size: 13px;
 	text-align: center;
-	color: ${props => props.theme.text};
+	color: ${props => props.theme.line};
 `;
 
 export default Footer;

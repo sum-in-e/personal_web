@@ -31,6 +31,10 @@ const globalStyle = createGlobalStyle`
 		    font-size : 17px;
             line-height : 23px;
 	    }
+        @media ${props => props.theme.xxl} {
+		    font-size : 18px;
+            line-height : 25px;
+	    }
     }
 `;
 

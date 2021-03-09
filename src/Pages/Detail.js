@@ -24,7 +24,7 @@ const Detail = () => {
 				<Links>
 					<Link href={portfolioData ? portfolioData.githubLink : ''} target="_blank">
 						<Img src="https://img.icons8.com/ios-filled/100/000000/github-2.png" alt="Github" />{' '}
-						<Explanation>Github Link</Explanation>
+						<Explanation>Github</Explanation>
 					</Link>
 					{params.id === 'bookstore' ? (
 						<Link isBookstore={params.id === 'bookstore'}>
@@ -81,6 +81,9 @@ const Container = styled.main`
 	@media ${props => props.theme.xl} {
 		padding: 90px 90px 30px 90px;
 	}
+	@media ${props => props.theme.xxl} {
+		padding: 110px 150px 50px 150px;
+	}
 `;
 
 const Section = styled.section`
@@ -110,6 +113,9 @@ const Category = styled.h2`
 	font-size: 18px;
 	@media ${props => props.theme.l} {
 		font-size: 20px;
+	}
+	@media ${props => props.theme.xxl} {
+		font-size: 23px;
 	}
 `;
 
@@ -146,6 +152,9 @@ const Link = styled.a`
 
 const Img = styled.img`
 	width: 25px;
+	@media ${props => props.theme.xxl} {
+		width: 30px;
+	}
 `;
 
 const Explanation = styled.div`
@@ -168,6 +177,9 @@ const Explanation = styled.div`
 			opacity: 1;
 		}
 	}
+	@media ${props => props.theme.xxl} {
+		width: 130%;
+	}
 `;
 
 /* ----------- Title ----------- */
@@ -178,6 +190,10 @@ const Title = styled.h1`
 	@media ${props => props.theme.xl} {
 		font-size: 40px;
 	}
+	@media ${props => props.theme.xxl} {
+		font-size: 50px;
+		margin-bottom: 100px;
+	}
 `;
 
 /* ----------- 소개 ----------- */
@@ -187,6 +203,9 @@ const Description = styled.p`
 	color: ${props => props.theme.text};
 	@media ${props => props.theme.l} {
 		line-height: inherit;
+	}
+	@media ${props => props.theme.xxl} {
+		width: 90%;
 	}
 `;
 

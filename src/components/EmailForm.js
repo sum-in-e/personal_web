@@ -98,17 +98,15 @@ const Form = styled.form`
 	@media ${props => props.theme.l} {
 		padding: 15px;
 	}
+	@media ${props => props.theme.xxl} {
+		margin-top: 30px;
+	}
 `;
 
 const InputWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 5px;
-	input {
-		border: 1px solid ${props => props.theme.line};
-		border-radius: 3px;
-		-webkit-appearance: none;
-	}
 	label {
 		font-size: 13px;
 		margin-bottom: 3px;
@@ -120,19 +118,29 @@ const InputWrapper = styled.div`
 			margin: 10px 15px 0 0;
 			font-size: 15px;
 		}
-		input {
-			width: 88%;
-		}
 	}
 `;
+
 const Span = styled.span`
 	color: red;
 `;
 
 const Input = styled.input`
 	height: 40px;
+	border: 1px solid ${props => props.theme.line};
+	border-radius: 3px;
+	-webkit-appearance: none;
 	box-shadow: none;
 	outline-color: ${props => props.theme.main};
+	font-family: 'NanumSquare', sans-serif;
+	@media ${props => props.theme.l} {
+		width: 88%;
+	}
+	@media ${props => props.theme.xxl} {
+		width: 90%;
+		height: 50px;
+		font-size: 15px;
+	}
 `;
 
 const MessageInput = styled.textarea`
@@ -143,8 +151,17 @@ const MessageInput = styled.textarea`
 	padding: 5px;
 	-webkit-appearance: none;
 	box-shadow: none;
+	font-family: 'NanumSquare', sans-serif;
 	@media ${props => props.theme.l} {
 		width: 88%;
+	}
+	@media ${props => props.theme.xxl} {
+		width: 90%;
+		padding: 8px 5px;
+		font-size: 15px;
+		&::placeholder {
+			font-size: 15px;
+		}
 	}
 `;
 
@@ -160,6 +177,9 @@ const SubmitBtn = styled.button`
 	outline-color: ${props => props.theme.main};
 	@media ${props => props.theme.xl} {
 		cursor: pointer;
+	}
+	@media ${props => props.theme.xxl} {
+		font-size: inherit;
 	}
 `;
 

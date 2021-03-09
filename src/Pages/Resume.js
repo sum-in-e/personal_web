@@ -6,7 +6,7 @@ const Resume = () => (
 		<File href="https://drive.google.com/file/d/122LEv2qKlFXRJA4WbKe3ASRAJk_lDRF3/view?usp=sharing" target="_blank">
 			<FileImg src="https://img.icons8.com/plasticine/100/000000/pdf.png" />
 			<FileName>Sumin-Kim-Resume-2021.pdf</FileName>
-			<Capacity>152KB</Capacity>
+			<Capacity>150KB</Capacity>
 		</File>
 		<TitleWrapper>
 			<Title>김 수 민</Title>
@@ -88,8 +88,8 @@ const Resume = () => (
 						<Summary>
 							한국 및 주요 국가들의 Covid-19 현황과 전 세계 통계를 볼 수 있는 웹사이트입니다.
 							<br /> Covid-19의 증상, 예방법을 제공하는 About 페이지와 COVID-19 Tracking API로부터 통계
-							데이터를 받아오는 Dashboard 페이지로 구성되어 있으며, Search 기능 이용해 찾고자 하는 국가를
-							검색할 수 있습니다.
+							데이터를 받아오는 Dashboard 페이지로 구성되어 있으며, Search 기능을 이용해 찾고자 하는
+							국가를 검색할 수 있습니다.
 						</Summary>
 					</InfoBlock>
 					<InfoBlock>
@@ -135,6 +135,9 @@ const Container = styled.main`
 	}
 	@media ${props => props.theme.xl} {
 		padding: 150px 90px 30px 90px;
+	}
+	@media ${props => props.theme.xxl} {
+		padding: 150px 150px 30px 150px;
 	}
 `;
 
@@ -185,6 +188,9 @@ const File = styled.a`
 		&:hover {
 			background-color: #f1f3f5;
 		}
+	}
+	@media ${props => props.theme.xxl} {
+		right: 150px;
 	}
 `;
 
@@ -245,9 +251,7 @@ const Block = styled.div`
 `;
 
 const Head = styled.span`
-	@media ${props => props.theme.xl} {
-		font-weight: bold;
-	}
+	font-weight: bold;
 `;
 
 const Email = styled.a`
@@ -269,6 +273,9 @@ const Text = styled.p`
 	@media ${props => props.theme.xl} {
 		margin-left: 15px;
 	}
+	@media ${props => props.theme.xxl} {
+		width: 90%;
+	}
 `;
 
 /* ----------- Portfolio ----------- */
@@ -279,6 +286,7 @@ const Project = styled.div`
 
 const ProjectName = styled.h3`
 	margin-bottom: 20px;
+	font-weight: bold;
 	font-size: 22px;
 `;
 
@@ -298,6 +306,9 @@ const BlockTitle = styled.p`
 
 const Summary = styled.p`
 	color: ${props => props.theme.text};
+	@media ${props => props.theme.xxl} {
+		width: 90%;
+	}
 `;
 
 const Stack = styled.span`

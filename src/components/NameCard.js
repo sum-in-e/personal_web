@@ -104,6 +104,9 @@ const Link = styled.li`
 const A = styled.a`
 	color: ${props => props.theme.text};
 	cursor: pointer;
+	@media ${props => props.theme.xxl} {
+		font-size: 17px;
+	}
 `;
 
 export default NameCard;
