@@ -43,6 +43,7 @@ const Container = styled.footer`
 	display: ${props => (props.isMainPage ? 'none' : 'flex')};
 	flex-direction: column;
 	justify-content: space-around;
+	align-items: center;
 	height: 180px;
 	padding: 30px 30px 0 30px;
 	background-color: ${props => props.theme.black};
@@ -60,19 +61,7 @@ const Container = styled.footer`
 
 /* ----------- Contact ----------- */
 const Contact = styled.div`
-	padding: 0 20px;
-	@media ${props => props.theme.s} {
-		padding: 0 210px;
-	}
-	@media ${props => props.theme.l} {
-		padding: 0 330px;
-	}
-	@media ${props => props.theme.xl} {
-		padding: 0 400px;
-	}
-	@media ${props => props.theme.xxl} {
-		padding: 0 38%;
-	}
+	width: 250px;
 `;
 
 const Links = styled.ul`
