@@ -26,21 +26,9 @@ const Preview = data => (
 );
 
 const Container = styled.article`
-	padding: 25px 0;
 	border-bottom: 1px solid ${props => props.theme.line};
-	cursor: pointer;
 	&:first-child {
 		border-top: 1px solid ${props => props.theme.line};
-	}
-	@media ${props => props.theme.l} {
-		padding: 35px 0;
-	}
-	@media ${props => props.theme.xl} {
-		padding: 35px 20px;
-		transition: all 0.3s;
-		&:hover {
-			background-color: ${props => props.theme.main};
-		}
 	}
 `;
 
@@ -49,8 +37,18 @@ const GoToLink = styled(Link)`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	padding: 25px 0;
+	cursor: pointer;
 	@media ${props => props.theme.l} {
 		flex-direction: row;
+		padding: 35px 0;
+	}
+	@media ${props => props.theme.xl} {
+		padding: 35px 20px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: ${props => props.theme.main};
+		}
 	}
 `;
 
