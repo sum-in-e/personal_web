@@ -54,6 +54,9 @@ const Container = styled.header`
 		height: 60px;
 		padding: 0 60px;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 0 90px;
+	}
 `;
 
 /* ----------- Logo ----------- */

@@ -133,6 +133,9 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 120px 60px 30px 60px;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 150px 90px 30px 90px;
+	}
 `;
 
 const Category = styled.h2`
@@ -174,14 +177,33 @@ const File = styled.a`
 		height: fit-content;
 		padding: 5px 20px;
 	}
+	@media ${props => props.theme.xl} {
+		right: 90px;
+		top: 150px;
+		padding: 5px 10px;
+		background-color: inherit;
+		&:hover {
+			background-color: #f1f3f5;
+		}
+	}
 `;
 
 const FileImg = styled.img`
 	width: 22px;
+	@media ${props => props.theme.l} {
+		width: 20px;
+	}
 `;
 
 const FileName = styled.span`
 	font-weight: 300;
+	font-family: 'sans-serif';
+	@media ${props => props.theme.l} {
+		font-size: 15px;
+	}
+	@media ${props => props.theme.xl} {
+		font-size: 16px;
+	}
 `;
 
 const Capacity = styled.span`
@@ -216,9 +238,17 @@ const Contact = styled.div`
 	margin-bottom: 20px;
 `;
 
-const Block = styled.div``;
+const Block = styled.div`
+	@media ${props => props.theme.xl} {
+		margin-left: 15px;
+	}
+`;
 
-const Head = styled.span``;
+const Head = styled.span`
+	@media ${props => props.theme.xl} {
+		font-weight: bold;
+	}
+`;
 
 const Email = styled.a`
 	margin-left: 5px;
@@ -236,6 +266,9 @@ const Link = styled.a`
 
 const Text = styled.p`
 	color: ${props => props.theme.text};
+	@media ${props => props.theme.xl} {
+		margin-left: 15px;
+	}
 `;
 
 /* ----------- Portfolio ----------- */
@@ -282,6 +315,9 @@ const SkillWrapper = styled.div``;
 
 const SkillList = styled.ul`
 	margin-left: 10px;
+	@media ${props => props.theme.xl} {
+		margin-left: 15px;
+	}
 `;
 
 const Li = styled.li`
@@ -294,6 +330,9 @@ const SkillCategory = styled.p`
 	margin-bottom: 5px;
 	font-weight: bold;
 	font-size: 16px;
+	@media ${props => props.theme.l} {
+		font-size: inherit;
+	}
 `;
 
 const Skill = styled.span`

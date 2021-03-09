@@ -158,6 +158,9 @@ const SubmitBtn = styled.button`
 	line-height: 20px;
 	color: ${props => props.theme.white};
 	outline-color: ${props => props.theme.main};
+	@media ${props => props.theme.xl} {
+		cursor: pointer;
+	}
 `;
 
 export default EmailForm;

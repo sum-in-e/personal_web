@@ -78,6 +78,9 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 90px 60px 30px 60px;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 90px 90px 30px 90px;
+	}
 `;
 
 const Section = styled.section`
@@ -88,6 +91,9 @@ const Section = styled.section`
 	}
 	@media ${props => props.theme.l} {
 		padding-top: 200px;
+	}
+	@media ${props => props.theme.xl} {
+		padding-top: 280px;
 	}
 `;
 
@@ -127,7 +133,15 @@ const Link = styled.a`
 	padding: 10px;
 	border: 1px solid ${props => props.theme.main};
 	border-radius: 50%;
+
 	cursor: ${props => (props.isBookstore ? 'not-allowed' : 'pointer')};
+	@media ${props => props.theme.xl} {
+		transition: 0.3s ease all;
+
+		&:hover {
+			background: ${props => (props.isBookstore ? props.theme.white : props.theme.main)};
+		}
+	}
 `;
 
 const Img = styled.img`
@@ -136,6 +150,24 @@ const Img = styled.img`
 
 const Explanation = styled.div`
 	display: none;
+	@media ${props => props.theme.xl} {
+		display: block;
+		position: absolute;
+		bottom: -10px;
+		width: 150%;
+		border-radius: 5px;
+		background-color: ${props => props.theme.black};
+		color: ${props => props.theme.white};
+		text-align: center;
+		font-size: 10px;
+		transition: all 0.3s;
+		opacity: 0;
+
+		${Link}:hover & {
+			transform: translateY(20px);
+			opacity: 1;
+		}
+	}
 `;
 
 /* ----------- Title ----------- */
@@ -143,6 +175,9 @@ const Title = styled.h1`
 	margin-bottom: 50px;
 	font-weight: bold;
 	font-size: 32px;
+	@media ${props => props.theme.xl} {
+		font-size: 40px;
+	}
 `;
 
 /* ----------- 소개 ----------- */

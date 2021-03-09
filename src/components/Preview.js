@@ -35,6 +35,13 @@ const Container = styled.article`
 	@media ${props => props.theme.l} {
 		padding: 35px 0;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 35px 20px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: ${props => props.theme.main};
+		}
+	}
 `;
 
 const GoToLink = styled(Link)`
@@ -55,6 +62,14 @@ const Title = styled.h2`
 		width: 25%;
 		font-weight: inherit;
 	}
+	@media ${props => props.theme.xl} {
+		width: 22%;
+		transition: all 0.3s;
+
+		${Container}:hover & {
+			color: ${props => props.theme.white};
+		}
+	}
 `;
 
 /* --------------------------- Keywords --------------------------- */
@@ -62,8 +77,11 @@ const Keywords = styled.ul`
 	padding: 20px;
 	text-align: center;
 	@media ${props => props.theme.l} {
-		width: 55%;
+		width: 65%;
 		padding: 0;
+	}
+	@media ${props => props.theme.xl} {
+		width: 68%;
 	}
 `;
 
@@ -89,6 +107,18 @@ const Keyword = styled.li`
 			content: none;
 		}
 	}
+	@media ${props => props.theme.xl} {
+		transition: all 0.3s;
+
+		&:hover {
+			transform: translateY(-5px);
+		}
+
+		${Container}:hover & {
+			background-color: ${props => props.theme.white};
+			border: 1px solid ${props => props.theme.main};
+		}
+	}
 `;
 
 /* --------------------------- Images --------------------------- */
@@ -112,6 +142,15 @@ const ImgWrapper = styled.li`
 		border: 1px solid ${props => props.theme.line};
 		border-radius: 50%;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 8px;
+		transition: all 0.3s;
+
+		${Container}:hover & {
+			background-color: ${props => props.theme.white};
+			border: 1px solid ${props => props.theme.main};
+		}
+	}
 `;
 
 const Img = styled.img`
@@ -120,6 +159,9 @@ const Img = styled.img`
 	@media ${props => props.theme.l} {
 		display: block;
 		width: 25px;
+	}
+	@media ${props => props.theme.xl} {
+		width: 27px;
 	}
 `;
 
@@ -135,6 +177,15 @@ const Explanation = styled.div`
 		position: absolute;
 		bottom: -20px;
 		opacity: 0;
+	}
+	@media ${props => props.theme.xl} {
+		width: 110%;
+		transition: all 0.3s;
+
+		${ImgWrapper}:hover & {
+			transform: translateY(10px);
+			opacity: 1;
+		}
 	}
 `;
 

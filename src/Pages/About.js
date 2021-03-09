@@ -154,6 +154,9 @@ const Container = styled.main`
 	@media ${props => props.theme.s} {
 		padding: 90px 60px 30px 60px;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 90px 90px 30px 90px;
+	}
 `;
 
 const Section = styled.section`
@@ -163,6 +166,9 @@ const Section = styled.section`
 	}
 	@media ${props => props.theme.m} {
 		padding-top: 70px;
+	}
+	@media ${props => props.theme.xl} {
+		padding-top: 120px;
 	}
 `;
 
@@ -209,6 +215,16 @@ const Resume = styled(Link)`
 	@media ${props => props.theme.l} {
 		padding: 2px 0px;
 	}
+	@media ${props => props.theme.xl} {
+		right: 90px;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: ${props => props.theme.main};
+			border: 1px solid ${props => props.theme.main};
+			color: ${props => props.theme.white};
+		}
+	}
 `;
 
 /* --------------------------- PROFILE --------------------------- */
@@ -224,11 +240,17 @@ const ProfileText = styled.p`
 /* --------------------------- 이러한 것들을 중요시해요. --------------------------- */
 const Important = styled.div`
 	display: grid;
-	grid-template-rows: auto;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+
 	@media ${props => props.theme.l} {
+		grid-template-rows: auto;
+		grid-template-columns: repeat(4, 1fr);
 		margin: 0 auto;
 		gap: 10px;
+	}
+	@media ${props => props.theme.xl} {
+		padding: 0 50px;
 	}
 `;
 
@@ -246,6 +268,15 @@ const ImgWrapper = styled.div`
 	align-items: center;
 	width: fit-content;
 	padding: 20px;
+
+	@media ${props => props.theme.xl} {
+		margin-bottom: 5px;
+		border-radius: 10px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: ${props => props.theme.main};
+		}
+	}
 `;
 
 const Img = styled.img`
@@ -280,6 +311,10 @@ const Skills = styled.ul`
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
 	}
+	@media ${props => props.theme.xl} {
+		grid-template-rows: auto;
+		grid-template-columns: repeat(5, 1fr);
+	}
 `;
 
 const Skill = styled.li`
@@ -309,6 +344,9 @@ const SkillSummary = styled.ul`
 		width: 85%;
 		margin: 0 auto;
 		font-size: 15px;
+	}
+	@media ${props => props.theme.xl} {
+		width: 90%;
 	}
 `;
 

@@ -71,6 +71,9 @@ const Container = styled.div`
 	@media ${props => props.theme.l} {
 		padding: 0 100px;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 0 250px;
+	}
 `;
 
 /* ----------- Desktop ----------- */

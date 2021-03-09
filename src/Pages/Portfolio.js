@@ -28,6 +28,9 @@ const Container = styled.main`
 		align-items: center;
 		min-height: 80vh;
 	}
+	@media ${props => props.theme.xl} {
+		padding: 90px 90px 30px 90px;
+	}
 `;
 
 const PreviewList = styled.section`
