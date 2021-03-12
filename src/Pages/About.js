@@ -87,9 +87,9 @@ const About = () => {
 								<Info>
 									<Name>CSS</Name>
 									<SkillSummary>
-										<Li>BEM 방법론을 적용할 수 있습니다.</Li>
-										<Li>CSS Flexbox와 Grid를 사용할 수 있습니다.</Li>
 										<Li>반응형 웹을 지원할 수 있습니다.</Li>
+										<Li>CSS Flexbox와 Grid를 사용할 수 있습니다.</Li>
+										<Li>BEM 방법론을 적용할 수 있습니다.</Li>
 									</SkillSummary>
 								</Info>
 							</Skill>
