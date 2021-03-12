@@ -46,7 +46,7 @@ const Container = styled.header`
 	background-color: ${props => props.theme.white};
 	box-shadow: 7px 7px 10px rgb(0 0 0 / 10%), -7px -7px 10px rgb(0 0 0 / 10%);
 	font-family: 'Inconsolata', monospace;
-	font-size: 20px;
+	font-size: 23px;
 	z-index: 10;
 
 	@media ${props => props.theme.s} {
