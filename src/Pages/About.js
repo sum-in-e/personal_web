@@ -129,6 +129,15 @@ const About = () => {
 									</SkillSummary>
 								</Info>
 							</Skill>
+							<Skill>
+								<SkillImg src="https://img.icons8.com/ios-filled/100/000000/git.png" alt="" React />
+								<Info>
+									<Name>Git/Github</Name>
+									<SkillSummary>
+										<Li>Git을 활용한 버전관리에 익숙합니다.</Li>
+									</SkillSummary>
+								</Info>
+							</Skill>
 						</Skills>
 					</Content>
 					<Content>
@@ -325,17 +334,13 @@ const Summary = styled.p`
 /* --------------------------- SKILLS --------------------------- */
 const Skills = styled.ul`
 	display: grid;
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(6, auto);
 	grid-template-columns: 1fr;
 	gap: 25px;
 	@media ${props => props.theme.l} {
 		grid-template-rows: repeat(2, auto);
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
-	}
-	@media ${props => props.theme.xl} {
-		grid-template-rows: auto;
-		grid-template-columns: repeat(5, 1fr);
 	}
 	@media ${props => props.theme.xxl} {
 		gap: 15px;
