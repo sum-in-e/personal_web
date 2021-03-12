@@ -71,8 +71,8 @@ const TitleWrapper = styled.div`
 const Name = styled.h1`
 	margin-bottom: 10px;
 	color: ${props => props.theme.black};
-	font-family: 'ELAND_Choice_M';
-	font-size: 28px;
+	font-family: 'Inconsolata', monospace;
+	font-size: 30px;
 `;
 
 const Occupation = styled.p`

@@ -45,7 +45,7 @@ const Container = styled.header`
 	padding: 15px 30px;
 	background-color: ${props => props.theme.white};
 	box-shadow: 7px 7px 10px rgb(0 0 0 / 10%), -7px -7px 10px rgb(0 0 0 / 10%);
-	font-family: 'ELAND_Choice_M';
+	font-family: 'Inconsolata', monospace;
 	font-size: 20px;
 	z-index: 10;
 
