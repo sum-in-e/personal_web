@@ -26,23 +26,13 @@ const Detail = () => {
 						<Img src="https://img.icons8.com/ios-filled/100/000000/github-2.png" alt="Github" />{' '}
 						<Explanation>Github</Explanation>
 					</Link>
-					{params.id === 'bookstore' ? (
-						<Link isBookstore={params.id === 'bookstore'}>
+					<Link href={portfolioData ? portfolioData.url : ''} target="_blank">
 							<Img
 								src="https://img.icons8.com/pastel-glyph/64/000000/external-link.png"
 								alt="External Link"
 							/>{' '}
 							<Explanation>사이트로 이동</Explanation>
-						</Link>
-					) : (
-						<Link href={portfolioData ? portfolioData.url : ''} target="_blank">
-							<Img
-								src="https://img.icons8.com/pastel-glyph/64/000000/external-link.png"
-								alt="External Link"
-							/>{' '}
-							<Explanation>사이트로 이동</Explanation>
-						</Link>
-					)}
+					</Link>
 				</Links>
 				<Title>{portfolioData ? portfolioData.name : ''}</Title>
 				<Article>
