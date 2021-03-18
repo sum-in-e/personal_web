@@ -378,9 +378,6 @@ const SkillSummary = styled.ul`
 	@media ${props => props.theme.xl} {
 		width: 90%;
 	}
-	@media ${props => props.theme.xxl} {
-		width: 100%;
-	}
 `;
 
 const Li = styled.li`

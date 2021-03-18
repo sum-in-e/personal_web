@@ -91,8 +91,8 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-	color: ${props => (props.isPainting ? props.theme.main : 'none')};
-	font-size: 17px;
+	color: ${props => (props.isPainting ? props.theme.main : 'inherit')};
+	font-size: 19px;
 	cursor: pointer;
 	@media ${props => props.theme.xxl} {
 		font-size: inherit;

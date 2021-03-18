@@ -15,8 +15,9 @@ const globalStyle = createGlobalStyle`
     html, body{
         font-family: 'NanumSquare', sans-serif;  
         font-size : 15px;
+        color : ${props => props.theme.black};
         -webkit-text-size-adjust :none;
-        -webkit-tap-highlight-color:transparent;
+        -webkit-tap-highlight-color: transparent;
         line-height : 20px;
         background-color : ${props => props.theme.white};
 
