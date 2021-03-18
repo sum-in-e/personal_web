@@ -1,36 +1,56 @@
 import React from 'react';
 import styled from 'styled-components';
-import desktopMain from '../assets/images/vanillaSearchMovie/desktop-main.png';
-import desktopSearch from '../assets/images/vanillaSearchMovie/desktop-search.png';
-import desktopResults from '../assets/images/vanillaSearchMovie/desktop-results.png';
-import desktopDetail from '../assets/images/vanillaSearchMovie/desktop-detail.png';
-import tabletMain from '../assets/images/vanillaSearchMovie/tablet-main.png';
-import tabletSearch from '../assets/images/vanillaSearchMovie/tablet-search.png';
-import tabletDetail from '../assets/images/vanillaSearchMovie/tablet-detail.png';
-import mobileMain from '../assets/images/vanillaSearchMovie/mobile-main.png';
-import mobileSearch from '../assets/images/vanillaSearchMovie/mobile-search.png';
-import mobileDetail from '../assets/images/vanillaSearchMovie/mobile-detail.png';
 
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<img src={desktopMain} alt="Desktop Preview" />
-			<img src={desktopSearch} alt="Desktop Preview" />
-			<img src={desktopResults} alt="Desktop Preview" />
-			<img src={desktopDetail} alt="Desktop Preview" />
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fdesktop-main.png?alt=media&token=5a9840dc-8fe9-4621-b1bb-c0e0461803ee"
+				alt="Desktop Preview"
+			/>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fdesktop-search.png?alt=media&token=592d3ae3-d082-4cbe-a329-95f240b59433"
+				alt="Desktop Preview"
+			/>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fdesktop-results.png?alt=media&token=a8765f70-2fd0-4232-a35d-a0450bcb77de"
+				alt="Desktop Preview"
+			/>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fdesktop-detail.png?alt=media&token=f8d9e581-9563-4059-a327-4967981d1b07"
+				alt="Desktop Preview"
+			/>
 		</Desktop>
 		<Tablet>
 			<BlockInTablet>
-				<img src={tabletMain} alt="Tablet Preview"></img>
-				<img src={tabletDetail} alt="Tablet Preview"></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Ftablet-main.png?alt=media&token=a50fc8db-2931-4e5e-954b-cf4ce1e740d4"
+					alt="Tablet Preview"
+				></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Ftablet-detail.png?alt=media&token=9fa5060d-fe64-486e-ba2c-30c3bc8fd9ea"
+					alt="Tablet Preview"
+				></img>
 			</BlockInTablet>
-			<img src={tabletSearch} alt="Tablet Preview"></img>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Ftablet-search.png?alt=media&token=425c7f17-a551-457d-a2a3-5f09cd382f85"
+				alt="Tablet Preview"
+			></img>
 		</Tablet>
 		<Mobile>
-			<img src={mobileSearch} alt="Mobile Preview"></img>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fmobile-search.png?alt=media&token=ee60052b-6a1a-4acf-b413-8e457d68bbfb"
+				alt="Mobile Preview"
+			></img>
 			<BlockInMobile>
-				<img src={mobileMain} alt="Mobile Preview"></img>
-				<img src={mobileDetail} alt="Mobile Preview"></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fmobile-main.png?alt=media&token=349eb8cc-3c5c-470c-a93c-478694646926"
+					alt="Mobile Preview"
+				></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/vanillaSearchMovie%2Fmobile-detail.png?alt=media&token=53586f0b-26f8-43f8-ab51-db7f4ae176d6"
+					alt="Mobile Preview"
+				></img>
 			</BlockInMobile>
 		</Mobile>
 	</Container>

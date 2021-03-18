@@ -1,15 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import desktopImage from '../assets/images/wcie/desktop-main.png';
-import tabletImage from '../assets/images/wcie/tablet-main.png';
 
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<img src={desktopImage} alt="Desktop Preview" />
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/wcie%2Fdesktop-main.jpg?alt=media&token=5b395adf-de81-421f-b17d-57a703d3e227"
+				alt="Desktop Preview"
+			/>
 		</Desktop>
 		<Tablet>
-			<img src={tabletImage} alt="Tablet Preview"></img>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/wcie%2Ftablet-main.jpg?alt=media&token=1efc46eb-23cf-49e1-bb39-1d04370933ce"
+				alt="Tablet Preview"
+			></img>
 		</Tablet>
 	</Container>
 );

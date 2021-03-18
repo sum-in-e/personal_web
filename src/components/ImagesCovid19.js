@@ -1,35 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
-import desktopHome from '../assets/images/covid19/desktop-home.png';
-import desktopAbout from '../assets/images/covid19/desktop-about.png';
-import desktopDashboard from '../assets/images/covid19/desktop-dashboard.png';
-import tabletHome from '../assets/images/covid19/tablet-home.png';
-import tabletAbout from '../assets/images/covid19/tablet-about.png';
-import tabletDashboard from '../assets/images/covid19/tablet-dashboard.png';
-import mobileHome from '../assets/images/covid19/mobile-home.png';
-import mobileAbout from '../assets/images/covid19/mobile-about.png';
-import mobileDashboard from '../assets/images/covid19/mobile-dashboard.png';
 
 const Detail = () => (
 	<Container>
 		<Desktop>
-			<img src={desktopHome} alt="Desktop Preview" />
-			<img src={desktopAbout} alt="Desktop Preview" />
-			<img src={desktopDashboard} alt="Desktop Preview" />
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fdesktop-home.png?alt=media&token=f37de825-699b-469c-8498-c493c96eb61a"
+				alt="Desktop Preview"
+			/>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fdesktop-about.png?alt=media&token=ae35a152-2f4b-48d2-8143-fb7a9c11932c"
+				alt="Desktop Preview"
+			/>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fdesktop-dashboard.png?alt=media&token=05c4ccdc-3ede-48e9-b9c5-468868168e8b"
+				alt="Desktop Preview"
+			/>
 		</Desktop>
 		<Tablet>
 			<BlockInTablet>
-				<img src={tabletHome} alt="Tablet Preview"></img>
-				<img src={tabletDashboard} alt="Tablet Preview"></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Ftablet-home.png?alt=media&token=efe359ff-5bb6-41cc-a46a-1fa652e49543"
+					alt="Tablet Preview"
+				></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Ftablet-dashboard.png?alt=media&token=7e9126a7-2976-4c5f-bc25-6e227c7c3f62"
+					alt="Tablet Preview"
+				></img>
 			</BlockInTablet>
-			<img src={tabletAbout} alt="Tablet Preview"></img>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Ftablet-about.png?alt=media&token=c9c1ffb4-2642-4ecc-ab86-6b637d2cfc09"
+				alt="Tablet Preview"
+			></img>
 		</Tablet>
 		<Mobile>
 			<BlockInMobile>
-				<img src={mobileHome} alt="Mobile Preview"></img>
-				<img src={mobileDashboard} alt="Mobile Preview"></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fmobile-home.png?alt=media&token=259c8c9d-f93c-49f8-b6f5-82435738936b"
+					alt="Mobile Preview"
+				></img>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fmobile-dashboard.png?alt=media&token=00fb1763-c517-4f44-8bf3-52c1d1399fb0"
+					alt="Mobile Preview"
+				></img>
 			</BlockInMobile>
-			<img src={mobileAbout} alt="Mobile Preview"></img>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/sum-in.appspot.com/o/covid19%2Fmobile-about.png?alt=media&token=4c7f0c44-6238-4857-9e60-581d85c3cb28"
+				alt="Mobile Preview"
+			></img>
 		</Mobile>
 	</Container>
 );
