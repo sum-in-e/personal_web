@@ -12,6 +12,13 @@ const Detail = () => {
 	const params = useParams();
 	const [portfolioData, setPortfolioData] = useState(null);
 
+	const giveNum = index => {
+		if (portfolioData.problems.length > 1) {
+			return `(${index + 1})`;
+		}
+		return '';
+	};
+
 	useEffect(() => {
 		DataRepo.forEach(data => {
 			if (params.id === data.params) setPortfolioData(data);
@@ -27,29 +34,59 @@ const Detail = () => {
 						<Explanation>Github</Explanation>
 					</Link>
 					<Link href={portfolioData ? portfolioData.url : ''} target="_blank">
-							<Img
-								src="https://img.icons8.com/pastel-glyph/64/000000/external-link.png"
-								alt="External Link"
-							/>{' '}
-							<Explanation>사이트로 이동</Explanation>
+						<Img
+							src="https://img.icons8.com/pastel-glyph/64/000000/external-link.png"
+							alt="External Link"
+						/>{' '}
+						<Explanation>사이트로 이동</Explanation>
 					</Link>
 				</Links>
 				<Title>{portfolioData ? portfolioData.name : ''}</Title>
 				<Article>
 					<Category>소개</Category>
 					<Description>{portfolioData ? portfolioData.description : ''}</Description>
-					<PointWrapper>
-						{portfolioData ? portfolioData.point.map((p, index) => <Point key={index}>{p}</Point>) : ''}
-					</PointWrapper>
 				</Article>
 				<Article>
-					<Category>STACKS</Category>
+					<Category>사용 기술</Category>
 					<Stacks>
 						{portfolioData
 							? portfolioData.skill.map((stack, index) => <Stack key={index}>{stack}</Stack>)
 							: ''}
 					</Stacks>
 				</Article>
+				<Article>
+					<Category>키포인트</Category>
+					<PointWrapper>
+						{portfolioData ? portfolioData.points.map((p, index) => <Point key={index}>{p}</Point>) : ''}
+					</PointWrapper>
+				</Article>
+				{portfolioData && portfolioData.problems
+					? portfolioData.problems.map((problem, index) => (
+							<Article key={index}>
+								<Category>
+									직면한 문제 & 개선한 방법
+									{giveNum(index)}
+								</Category>
+								<Ul>
+									<Li>
+										<Problem>직면한 문제 👉🏻 {problem.issueTitle}</Problem>
+										<Description>{problem.issue}</Description>
+									</Li>
+									<Li>
+										<Problem>개선한 방법 👉🏻 {problem.solutionTitle}</Problem>
+										<Description>{problem.solution}</Description>
+										{problem.solutionLink ? (
+											<BlogLink href={problem.solutionLink} target="_blank">
+												해당 문제 개선에 대한 블로그 포스팅 확인하기
+											</BlogLink>
+										) : (
+											''
+										)}
+									</Li>
+								</Ul>
+							</Article>
+					  ))
+					: ''}
 				<Article>
 					<Category>PREVIEW</Category>
 					{params.id === 'wcie' ? <ImageslWcie /> : ''}
@@ -202,15 +239,25 @@ const Description = styled.p`
 	}
 `;
 
+/* ----------- Point ----------- */
 const PointWrapper = styled.ul`
 	margin-top: 10px;
 `;
 
 const Point = styled.li`
-	list-style-type: disc;
-	margin-left: 18px;
 	line-height: 25px;
 	color: ${props => props.theme.text};
+
+	&:before {
+		content: '✔';
+		color: ${props => props.theme.main};
+		vertical-align: middle;
+		margin-right: 3px;
+		font-size: 15px;
+	}
+	@media ${props => props.theme.l} {
+		line-height: inherit;
+	}
 `;
 
 /* ----------- Stack ----------- */
@@ -220,6 +267,28 @@ const Stack = styled.span`
 	display: inline-block;
 	margin-right: 15px;
 	color: ${props => props.theme.text};
+`;
+
+/* ----------- 직면한 문제 & 개선한 방법 ----------- */
+const Problem = styled.p`
+	padding-bottom: 10px;
+	font-weight: bold;
+`;
+
+const BlogLink = styled.a`
+	line-height: 30px;
+	font-size: 15px;
+	color: ${props => props.theme.main};
+	text-decoration: underline;
+`;
+const Ul = styled.ul`
+	list-style-type: circle;
+	margin-left: 20px;
+`;
+const Li = styled.li`
+	&:not(:first-child) {
+		padding-top: 20px;
+	}
 `;
 
 export default Detail;
