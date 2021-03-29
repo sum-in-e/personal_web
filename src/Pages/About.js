@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Skills from '../components/Skills';
 import EmailForm from '../components/EmailForm';
 
 const About = () => {
@@ -12,12 +13,12 @@ const About = () => {
 			<Container>
 				<Section>
 					<Content>
-						<Category>PROFILE</Category>
+						<Category>안녕하세요, 김수민입니다.</Category>
 						<ProfileText>
-							읽기 쉬운 서비스를 구현하는 것에 가치를 두는 웹 프론트엔드 개발자 김수민입니다.
+							읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다.
 							<br />
-							직관적인 UI/UX를 적용하여 유저 입장에서 사용하기 쉬운 환경을 제공하고, 개발자가 쉽게 구조를
-							파악하고 서비스를 유지 보수할 수 있는 가독성 높은 코드를 작성하고자 고민합니다.
+							직관적인 UI/UX를 적용하여 사용자의 접근성을 높이고, 개발자가 보다 쉽게 서비스 구조를 파악할
+							수 있도록 가독성 높은 코드를 작성하고자 고민합니다.
 							<br />
 							일시적으로 문제를 해결하기보다는 근본적인 원인을 찾아 이를 이해하는 것을 우선시하며,
 							능동적으로 업무를 처리합니다.
@@ -32,9 +33,7 @@ const About = () => {
 						<Important>
 							<Block>
 								<ImgWrapper>
-									<Img src="https://img.icons8.com/dusk/64/000000/template.png" />{' '}
-									{/* 									<Img src="https://img.icons8.com/dusk/64/000000/for-beginner.png" alt="Intutive" />
-									 */}{' '}
+									<Img src="https://img.icons8.com/dusk/64/000000/template.png" />
 								</ImgWrapper>
 								<Title>Intutive</Title>
 								<Summary>쉽게 읽고 사용할 수 있는 직관적인 UI/UX</Summary>
@@ -42,103 +41,29 @@ const About = () => {
 							<Block>
 								<ImgWrapper>
 									<Img src="https://img.icons8.com/plasticine/100/000000/code-file.png" />
-									{/* 									<Img src="https://img.icons8.com/office/80/000000/code.png" />{' '}
-									 */}{' '}
 								</ImgWrapper>
 								<Title>Readable Code</Title>
 								<Summary>읽기 쉬운 코드 작성</Summary>
 							</Block>
 							<Block>
 								<ImgWrapper>
-									<Img
-										src="https://img.icons8.com/plasticine/100/000000/administrative-tools.png"
-										alt="Exclude Unnecessay Things"
-									/>
+									<Img src="https://img.icons8.com/plasticine/100/000000/numbered-list.png" />{' '}
 								</ImgWrapper>
-								<Title>Stability</Title>
-								<Summary>서비스 안정성</Summary>
+								<Title>Concise</Title>
+								<Summary>간결한 웹 구성</Summary>
 							</Block>
 							<Block>
 								<ImgWrapper>
-									<Img
-										src="https://img.icons8.com/plasticine/100/000000/conference.png"
-										alt="Connection"
-									/>{' '}
+									<Img src="https://img.icons8.com/dusk/64/000000/upgrade.png" />{' '}
 								</ImgWrapper>
-								<Title>Communication</Title>
-								<Summary>원활한 의사소통</Summary>
+								<Title>Improvement</Title>
+								<Summary>문제 개선에 대한 의지</Summary>
 							</Block>
 						</Important>
 					</Content>
 					<Content>
 						<Category>SKILLS</Category>
-						<Skills>
-							<Skill>
-								<SkillImg src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML" />
-								<Info>
-									<Name>HTML</Name>
-									<SkillSummary>
-										<Li>시맨틱 마크업을 준수합니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-							<Skill>
-								<SkillImg src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS" />
-								<Info>
-									<Name>CSS</Name>
-									<SkillSummary>
-										<Li>반응형 웹을 지원할 수 있습니다.</Li>
-										<Li>CSS Flexbox와 Grid를 사용할 수 있습니다.</Li>
-										<Li>BEM 방법론을 적용할 수 있습니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-							<Skill>
-								<SkillImg
-									src="https://img.icons8.com/color/96/000000/javascript.png"
-									alt="JavaScript"
-								/>
-								<Info>
-									<Name>JavaScript</Name>
-									<SkillSummary>
-										<Li>ES6+ 이후의 문법에 익숙합니다.</Li>
-										<Li>jQuery 없이 DOM에 원활하게 접근할 수 있습니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-							<Skill>
-								<SkillImg src="https://img.icons8.com/plasticine/100/000000/react.png" alt="" React />
-								<Info>
-									<Name>React</Name>
-									<SkillSummary>
-										<Li>React Hooks 사용에 능숙합니다.</Li>
-										<Li>컴포넌트 라이프 사이클에 대해 숙지하고 있으며, 이를 활용할 수 있습니다.</Li>
-										<Li>Styled-components를 원활하게 사용할 수 있습니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-							<Skill>
-								<SkillImg
-									src="https://img.icons8.com/color/96/000000/typescript.png"
-									alt="TypeScript"
-								/>
-								<Info>
-									<Name>TypeScript</Name>
-									<SkillSummary>
-										<Li>타입의 선언 및 간단한 활용이 가능합니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-							<Skill>
-								<SkillImg src="https://img.icons8.com/ios-filled/100/000000/git.png" alt="" React />
-								<Info>
-									<Name>Git/Github</Name>
-									<SkillSummary>
-										<Li>Git을 활용한 버전관리에 익숙합니다.</Li>
-									</SkillSummary>
-								</Info>
-							</Skill>
-						</Skills>
+						<Skills />
 					</Content>
 					<Content>
 						<Category>CONTACT</Category>
@@ -277,7 +202,6 @@ const Important = styled.div`
 	@media ${props => props.theme.l} {
 		grid-template-rows: auto;
 		grid-template-columns: repeat(4, 1fr);
-		margin: 0 auto;
 		gap: 10px;
 	}
 	@media ${props => props.theme.xl} {
@@ -312,9 +236,6 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
 	width: 55px;
-	&:first {
-		width: 45px;
-	}
 `;
 
 const Title = styled.h3`
@@ -328,67 +249,6 @@ const Summary = styled.p`
 	color: ${props => props.theme.text};
 	@media ${props => props.theme.l} {
 		font-size: 15px;
-	}
-`;
-
-/* --------------------------- SKILLS --------------------------- */
-const Skills = styled.ul`
-	display: grid;
-	grid-template-rows: repeat(6, auto);
-	grid-template-columns: 1fr;
-	gap: 25px;
-	@media ${props => props.theme.l} {
-		grid-template-rows: repeat(2, auto);
-		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
-	}
-	@media ${props => props.theme.xxl} {
-		gap: 15px;
-	}
-`;
-
-const Skill = styled.li`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 30px;
-`;
-
-const SkillImg = styled.img`
-	width: 60px;
-	margin-bottom: 12px;
-`;
-
-const Info = styled.div`
-	text-align: center;
-`;
-
-const Name = styled.h3`
-	margin-bottom: 15px;
-	font-weight: bold;
-	font-size: 17px;
-`;
-
-const SkillSummary = styled.ul`
-	@media ${props => props.theme.l} {
-		width: 85%;
-		margin: 0 auto;
-		font-size: 15px;
-	}
-	@media ${props => props.theme.xl} {
-		width: 90%;
-	}
-`;
-
-const Li = styled.li`
-	margin-bottom: 5px;
-	color: ${props => props.theme.text};
-
-	&:before {
-		content: '✔';
-		vertical-align: middle;
-		margin-right: 3px;
-		font-size: 10px;
 	}
 `;
 

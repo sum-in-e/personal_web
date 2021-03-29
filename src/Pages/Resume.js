@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Skills from '../components/Skills';
 
 const Resume = () => (
 	<Container>
-		<File href="https://drive.google.com/file/d/122LEv2qKlFXRJA4WbKe3ASRAJk_lDRF3/view?usp=sharing" target="_blank">
+		<File href="https://drive.google.com/file/d/1i65mgcJLyugRdMS2eCEq3p7V3v5BaADX/view?usp=sharing" target="_blank">
 			<FileImg src="https://img.icons8.com/plasticine/100/000000/pdf.png" />
 			<FileName>Sumin-Kim-Resume-2021.pdf</FileName>
-			<Capacity>150KB</Capacity>
+			<Capacity>63KB</Capacity>
 		</File>
 		<TitleWrapper>
 			<Title>김 수 민</Title>
@@ -47,12 +48,15 @@ const Resume = () => (
 		<Article>
 			<Category>Introduce</Category>
 			<Text>
-				React 중심의 프론트엔드 개발을 해왔습니다. ES6+ 이후의 문법에 익숙하며, UI/UX 디자인에 관심이 많습니다.
-				<br /> 읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다.
+				React 중심의 프론트엔드 개발을 해왔으며, 읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다. <br />
+				직관적인 UI/UX를 적용하여 사용자의 접근성을 높이고, 개발자가 보다 쉽게 서비스 구조를 파악할 수 있도록
+				가독성 높은 코드를 작성하고자 고민합니다.
 				<br />
-				직관적인 UI/UX를 적용하여 유저 입장에서 사용하기 쉬운 환경을 제공하고, 개발자가 쉽게 구조를 파악하고
-				서비스를 유지 보수할 수 있는 가독성 높은 코드를 작성하고자 고민합니다.
-				<br /> 일시적인 문제 해결 보다 근본적인 원인을 찾아 이를 이해하는 것을 우선시합니다.
+				일시적으로 문제를 해결하기보다는 근본적인 원인을 찾아 이를 이해하는 것을 우선시하며, 능동적으로 업무를
+				처리합니다.
+				<br />
+				현재는 UI/UX 디자인에 대한 이해도를 높이고, 이를 바탕으로 사용자 입장에서 매력적으로 다가오는 웹을
+				구현하는 프론트엔드 개발자를 목표로 하고 있습니다.
 			</Text>
 		</Article>
 		<Article>
@@ -63,14 +67,17 @@ const Resume = () => (
 					<InfoBlock>
 						<BlockTitle>Description</BlockTitle>
 						<Summary>
-							To Do 기록 웹 어플리케이션입니다.
-							<br /> 이메일 인증, 마이 프로필, 할 일 추가 및 편집, 삭제, 완료가 가능하며 Firebase를 이용해
-							데이터 저장 및 웹 호스팅을 진행하였습니다.
+							React와 TypeScript를 결합해 만든 To Do 기록 웹 어플리케이션입니다.
+							<br />
+							Firebase를 통한 유저 인증 및 데이터 CRUD를 구현하였고, Context API + useReducer(Hooks)
+							조합을 이용한 전역 상태 관리를 진행하였습니다.
+							<br />
+							또한 모바일과 데스크탑에 대응할 수 있도록 반응형 웹으로 설계되었습니다.
 						</Summary>
 					</InfoBlock>
 					<InfoBlock>
 						<BlockTitle>Tech Stack</BlockTitle>
-						<Stack>ES6, React, Hooks, TypeScript, Styled-Components, Firebase, Git</Stack>
+						<Stack>TypeScript, React, Hooks, ES6, Styled-Components, Firebase, Git</Stack>
 					</InfoBlock>
 					<InfoBlock>
 						<BlockTitle>Link</BlockTitle>
@@ -87,14 +94,16 @@ const Resume = () => (
 						<BlockTitle>Description</BlockTitle>
 						<Summary>
 							한국 및 주요 국가들의 Covid-19 현황과 전 세계 통계를 볼 수 있는 웹사이트입니다.
-							<br /> Covid-19의 증상, 예방법을 제공하는 About 페이지와 COVID-19 Tracking API로부터 통계
-							데이터를 받아오는 Dashboard 페이지로 구성되어 있으며, Search 기능을 이용해 찾고자 하는
-							국가를 검색할 수 있습니다.
+							<br />
+							Fetch를 통해 API 요청으로 데이터를 받아오며, Async/Await을 이용해 비동기적으로 로직을
+							수행합니다.
+							<br />
+							모바일과 데스크탑에 대응할 수 있도록 반응형 웹으로 설계되었습니다.
 						</Summary>
 					</InfoBlock>
 					<InfoBlock>
 						<BlockTitle>Tech Stack</BlockTitle>
-						<Stack>ES6, React, Hooks, Styled-Components, AWS S3, Git</Stack>
+						<Stack>React, Hooks, ES6, Styled-Components, AWS S3, Git</Stack>
 					</InfoBlock>
 					<InfoBlock>
 						<BlockTitle>Link</BlockTitle>
@@ -112,16 +121,7 @@ const Resume = () => (
 		<Article>
 			<Category>Skill</Category>
 			<SkillWrapper>
-				<SkillList>
-					<Li>
-						<SkillCategory>Front-end</SkillCategory>
-						<Skill>ES6, TypeScript, React, Styled-components, HTML/CSS</Skill>
-					</Li>
-					<Li>
-						<SkillCategory>Others</SkillCategory>
-						<Skill>Git/Github, Firebase</Skill>
-					</Li>
-				</SkillList>
+				<Skills />
 			</SkillWrapper>
 		</Article>
 	</Container>
@@ -329,31 +329,5 @@ const ExternalLink = styled.a`
 /* ----------- Skill ----------- */
 
 const SkillWrapper = styled.div``;
-
-const SkillList = styled.ul`
-	margin-left: 10px;
-	@media ${props => props.theme.xl} {
-		margin-left: 15px;
-	}
-`;
-
-const Li = styled.li`
-	list-style-type: disc;
-	margin-left: 15px;
-	margin-bottom: 20px;
-`;
-
-const SkillCategory = styled.p`
-	margin-bottom: 5px;
-	font-weight: bold;
-	font-size: 16px;
-	@media ${props => props.theme.l} {
-		font-size: inherit;
-	}
-`;
-
-const Skill = styled.span`
-	color: ${props => props.theme.text};
-`;
 
 export default Resume;
