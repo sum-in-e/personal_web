@@ -7,7 +7,7 @@ const Preview = data => (
 		<GoToLink to={`/portfolio/${data.data.params}`}>
 			<Title>{data.data.name}</Title>
 			<Keywords>
-				{data.data.keyword.map((keyword, index) => (
+				{data.data.portfolio_keyword.map((keyword, index) => (
 					<Keyword key={index}>{keyword}</Keyword>
 				))}
 			</Keywords>

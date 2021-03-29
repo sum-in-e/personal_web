@@ -90,7 +90,7 @@ const A = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 10px;
+	padding: 10px;
 	color: #ababab;
 `;
 

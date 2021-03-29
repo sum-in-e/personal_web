@@ -253,10 +253,18 @@ const Point = styled.li`
 		color: ${props => props.theme.main};
 		vertical-align: middle;
 		margin-right: 3px;
-		font-size: 15px;
+		font-size: 10px;
 	}
 	@media ${props => props.theme.l} {
 		line-height: inherit;
+		&:before {
+			font-size: 11px;
+		}
+	}
+	@media ${props => props.theme.xl} {
+		&:before {
+			font-size: 13px;
+		}
 	}
 `;
 

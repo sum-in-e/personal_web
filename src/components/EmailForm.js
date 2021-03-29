@@ -193,7 +193,7 @@ const SubmitBtn = styled.button`
 		cursor: pointer;
 	}
 	@media ${props => props.theme.xxl} {
-		font-size: inherit;
+		font-size: 17px;
 	}
 `;
 
