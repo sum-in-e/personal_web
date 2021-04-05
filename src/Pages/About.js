@@ -18,10 +18,8 @@ const About = () => {
 							읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다.
 							<br />
 							직관적인 UI/UX를 적용하여 사용자의 접근성을 높이고, 개발자가 보다 쉽게 서비스 구조를 파악할
-							수 있도록 가독성 높은 코드를 작성하고자 고민합니다.
-							<br />
-							일시적으로 문제를 해결하기보다는 근본적인 원인을 찾아 이를 이해하는 것을 우선시하며,
-							능동적으로 업무를 처리합니다.
+							수 있도록 가독성 높은 코드를 작성하고자 고민합니다. 일시적으로 문제를 해결하기보다는
+							근본적인 원인을 찾아 이를 이해하는 것을 우선시하며, 능동적으로 업무를 처리합니다.
 							<br />
 							현재는 UI/UX 디자인에 대한 이해도를 높이고, 이를 바탕으로 사용자 입장에서 매력적으로
 							다가오는 웹을 구현하는 프론트엔드 개발자를 목표로 하고 있습니다.
@@ -44,13 +42,6 @@ const About = () => {
 								</ImgWrapper>
 								<Title>Readable Code</Title>
 								<Summary>읽기 쉬운 코드 작성</Summary>
-							</Block>
-							<Block>
-								<ImgWrapper>
-									<Img src="https://img.icons8.com/plasticine/100/000000/numbered-list.png" />{' '}
-								</ImgWrapper>
-								<Title>Concise</Title>
-								<Summary>간결한 웹 구성</Summary>
 							</Block>
 							<Block>
 								<ImgWrapper>
@@ -196,12 +187,12 @@ const ProfileText = styled.p`
 /* --------------------------- 이러한 것들을 중요시해요. --------------------------- */
 const Important = styled.div`
 	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 
-	@media ${props => props.theme.l} {
+	@media ${props => props.theme.m} {
 		grid-template-rows: auto;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
 	}
 	@media ${props => props.theme.xl} {
