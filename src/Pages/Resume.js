@@ -7,7 +7,7 @@ const Resume = () => (
 		<File href="https://drive.google.com/file/d/1i65mgcJLyugRdMS2eCEq3p7V3v5BaADX/view?usp=sharing" target="_blank">
 			<FileImg src="https://img.icons8.com/plasticine/100/000000/pdf.png" />
 			<FileName>Sumin-Kim-Resume-2021.pdf</FileName>
-			<Capacity>63KB</Capacity>
+			<Capacity>61KB</Capacity>
 		</File>
 		<TitleWrapper>
 			<Title>김 수 민</Title>
@@ -50,17 +50,21 @@ const Resume = () => (
 			<Text>
 				React 중심의 프론트엔드 개발을 해왔으며, 읽기 쉬운 서비스를 구현하는 것에 가치를 두고 있습니다. <br />
 				직관적인 UI/UX를 적용하여 사용자의 접근성을 높이고, 개발자가 보다 쉽게 서비스 구조를 파악할 수 있도록
-				가독성 높은 코드를 작성하고자 고민합니다.
-				<br />
-				일시적으로 문제를 해결하기보다는 근본적인 원인을 찾아 이를 이해하는 것을 우선시하며, 능동적으로 업무를
-				처리합니다.
+				가독성 높은 코드를 작성하고자 고민합니다. 일시적으로 문제를 해결하기보다는 근본적인 원인을 찾아 이를
+				이해하는 것을 우선시하며, 능동적으로 업무를 처리합니다.
 				<br />
 				현재는 UI/UX 디자인에 대한 이해도를 높이고, 이를 바탕으로 사용자 입장에서 매력적으로 다가오는 웹을
 				구현하는 프론트엔드 개발자를 목표로 하고 있습니다.
 			</Text>
 		</Article>
 		<Article>
-			<Category>Portfolio</Category>
+			<Category>Skills</Category>
+			<SkillWrapper>
+				<Skills />
+			</SkillWrapper>
+		</Article>
+		<Article>
+			<Category>Portfolios</Category>
 			<Project>
 				<ProjectName>Todos</ProjectName>
 				<ProjectInfo>
@@ -117,12 +121,6 @@ const Resume = () => (
 					</InfoBlock>
 				</ProjectInfo>
 			</Project>
-		</Article>
-		<Article>
-			<Category>Skill</Category>
-			<SkillWrapper>
-				<Skills />
-			</SkillWrapper>
 		</Article>
 	</Container>
 );
