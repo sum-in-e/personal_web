@@ -67,7 +67,7 @@ const dataRepo = [
 			'React와 COVID-19 Tracking API를 이용하여 한국 및 주요 국가들의 현황과 전 세계 통계를 볼 수 있는 웹 사이트',
 		skill: ['React', 'Hooks', 'ES6', 'Styled-components', 'AWS S3', 'Git'],
 		points: [
-			'Fetch를 이용한 API 요청',
+			'Axios를 이용한 API 요청',
 			'Async/Await을 통한 비동기 처리',
 			'모바일과 데스크탑에 대응할 수 있는 반응형 웹 구현',
 		],
